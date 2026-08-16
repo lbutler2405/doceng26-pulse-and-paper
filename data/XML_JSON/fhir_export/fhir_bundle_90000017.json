@@ -1,0 +1,6182 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "https://doceng26-tutorial.example",
+        "code": "synthetic"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "id": "90000017",
+        "gender": "female",
+        "birthDate": "1955-01-01"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "92000017",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "IMP",
+          "display": "inpatient encounter"
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "period": {
+          "start": "2025-05-01T12:58:00+00:00",
+          "end": "2025-05-05T22:38:00+00:00"
+        },
+        "serviceProvider": {
+          "display": "MICU"
+        },
+        "reasonCode": [
+          {
+            "text": "shortness of breath"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "90000017-cond-1",
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "code": {
+          "text": "chronic kidney disease"
+        },
+        "clinicalStatus": {
+          "text": "active"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-vit-3988-heartrate",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-01T13:13:00+00:00",
+        "valueQuantity": {
+          "value": 83.9,
+          "unit": "beats/minute",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-vit-3988-resprate",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "9279-1",
+              "display": "Respiratory rate"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-01T13:13:00+00:00",
+        "valueQuantity": {
+          "value": 17.5,
+          "unit": "breaths/minute",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-vit-3988-o2sat",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "59408-5",
+              "display": "Oxygen saturation by pulse oximetry"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-01T13:13:00+00:00",
+        "valueQuantity": {
+          "value": 96.7,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-vit-3988-sbp",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8480-6",
+              "display": "Systolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-01T13:13:00+00:00",
+        "valueQuantity": {
+          "value": 99.8,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-vit-3988-dbp",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8462-4",
+              "display": "Diastolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-01T13:13:00+00:00",
+        "valueQuantity": {
+          "value": 82.0,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-vit-4016-heartrate",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-01T20:13:00+00:00",
+        "valueQuantity": {
+          "value": 79.5,
+          "unit": "beats/minute",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-vit-4016-resprate",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "9279-1",
+              "display": "Respiratory rate"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-01T20:13:00+00:00",
+        "valueQuantity": {
+          "value": 17.0,
+          "unit": "breaths/minute",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-vit-4016-o2sat",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "59408-5",
+              "display": "Oxygen saturation by pulse oximetry"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-01T20:13:00+00:00",
+        "valueQuantity": {
+          "value": 96.5,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-vit-4016-sbp",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8480-6",
+              "display": "Systolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-01T20:13:00+00:00",
+        "valueQuantity": {
+          "value": 109.6,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-vit-4016-dbp",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8462-4",
+              "display": "Diastolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-01T20:13:00+00:00",
+        "valueQuantity": {
+          "value": 84.3,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-vit-4044-heartrate",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-02T03:13:00+00:00",
+        "valueQuantity": {
+          "value": 82.0,
+          "unit": "beats/minute",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-vit-4044-resprate",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "9279-1",
+              "display": "Respiratory rate"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-02T03:13:00+00:00",
+        "valueQuantity": {
+          "value": 20.2,
+          "unit": "breaths/minute",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-vit-4044-o2sat",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "59408-5",
+              "display": "Oxygen saturation by pulse oximetry"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-02T03:13:00+00:00",
+        "valueQuantity": {
+          "value": 96.4,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-vit-4044-sbp",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8480-6",
+              "display": "Systolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-02T03:13:00+00:00",
+        "valueQuantity": {
+          "value": 107.8,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-vit-4044-dbp",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8462-4",
+              "display": "Diastolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-02T03:13:00+00:00",
+        "valueQuantity": {
+          "value": 93.0,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-vit-4072-heartrate",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-02T10:13:00+00:00",
+        "valueQuantity": {
+          "value": 83.8,
+          "unit": "beats/minute",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-vit-4072-resprate",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "9279-1",
+              "display": "Respiratory rate"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-02T10:13:00+00:00",
+        "valueQuantity": {
+          "value": 22.4,
+          "unit": "breaths/minute",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-vit-4072-o2sat",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "59408-5",
+              "display": "Oxygen saturation by pulse oximetry"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-02T10:13:00+00:00",
+        "valueQuantity": {
+          "value": 95.6,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-vit-4072-sbp",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8480-6",
+              "display": "Systolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-02T10:13:00+00:00",
+        "valueQuantity": {
+          "value": 136.0,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-vit-4072-dbp",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8462-4",
+              "display": "Diastolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-02T10:13:00+00:00",
+        "valueQuantity": {
+          "value": 69.6,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-vit-4100-heartrate",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-02T17:13:00+00:00",
+        "valueQuantity": {
+          "value": 86.7,
+          "unit": "beats/minute",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-vit-4100-resprate",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "9279-1",
+              "display": "Respiratory rate"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-02T17:13:00+00:00",
+        "valueQuantity": {
+          "value": 16.2,
+          "unit": "breaths/minute",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-vit-4100-o2sat",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "59408-5",
+              "display": "Oxygen saturation by pulse oximetry"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-02T17:13:00+00:00",
+        "valueQuantity": {
+          "value": 95.9,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-vit-4100-sbp",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8480-6",
+              "display": "Systolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-02T17:13:00+00:00",
+        "valueQuantity": {
+          "value": 129.1,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-vit-4100-dbp",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8462-4",
+              "display": "Diastolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-02T17:13:00+00:00",
+        "valueQuantity": {
+          "value": 67.1,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-vit-4128-heartrate",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-03T00:13:00+00:00",
+        "valueQuantity": {
+          "value": 96.1,
+          "unit": "beats/minute",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-vit-4128-resprate",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "9279-1",
+              "display": "Respiratory rate"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-03T00:13:00+00:00",
+        "valueQuantity": {
+          "value": 20.5,
+          "unit": "breaths/minute",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-vit-4128-o2sat",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "59408-5",
+              "display": "Oxygen saturation by pulse oximetry"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-03T00:13:00+00:00",
+        "valueQuantity": {
+          "value": 91.3,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-vit-4128-sbp",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8480-6",
+              "display": "Systolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-03T00:13:00+00:00",
+        "valueQuantity": {
+          "value": 95.4,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-vit-4128-dbp",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8462-4",
+              "display": "Diastolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-03T00:13:00+00:00",
+        "valueQuantity": {
+          "value": 69.4,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-vit-4156-heartrate",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-03T07:13:00+00:00",
+        "valueQuantity": {
+          "value": 117.6,
+          "unit": "beats/minute",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-vit-4156-resprate",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "9279-1",
+              "display": "Respiratory rate"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-03T07:13:00+00:00",
+        "valueQuantity": {
+          "value": 30.7,
+          "unit": "breaths/minute",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-vit-4156-o2sat",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "59408-5",
+              "display": "Oxygen saturation by pulse oximetry"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-03T07:13:00+00:00",
+        "valueQuantity": {
+          "value": 85.2,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-vit-4156-sbp",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8480-6",
+              "display": "Systolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-03T07:13:00+00:00",
+        "valueQuantity": {
+          "value": 76.3,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-vit-4156-dbp",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8462-4",
+              "display": "Diastolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-03T07:13:00+00:00",
+        "valueQuantity": {
+          "value": 60.4,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-vit-4212-heartrate",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-03T21:13:00+00:00",
+        "valueQuantity": {
+          "value": 115.5,
+          "unit": "beats/minute",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-vit-4212-resprate",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "9279-1",
+              "display": "Respiratory rate"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-03T21:13:00+00:00",
+        "valueQuantity": {
+          "value": 30.0,
+          "unit": "breaths/minute",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-vit-4212-o2sat",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "59408-5",
+              "display": "Oxygen saturation by pulse oximetry"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-03T21:13:00+00:00",
+        "valueQuantity": {
+          "value": 85.5,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-vit-4212-sbp",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8480-6",
+              "display": "Systolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-03T21:13:00+00:00",
+        "valueQuantity": {
+          "value": 89.2,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-vit-4212-dbp",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8462-4",
+              "display": "Diastolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-03T21:13:00+00:00",
+        "valueQuantity": {
+          "value": 61.3,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-vit-4240-heartrate",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-04T04:13:00+00:00",
+        "valueQuantity": {
+          "value": 120.5,
+          "unit": "beats/minute",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-vit-4240-resprate",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "9279-1",
+              "display": "Respiratory rate"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-04T04:13:00+00:00",
+        "valueQuantity": {
+          "value": 27.0,
+          "unit": "breaths/minute",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-vit-4240-o2sat",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "59408-5",
+              "display": "Oxygen saturation by pulse oximetry"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-04T04:13:00+00:00",
+        "valueQuantity": {
+          "value": 83.4,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-vit-4240-sbp",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8480-6",
+              "display": "Systolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-04T04:13:00+00:00",
+        "valueQuantity": {
+          "value": 87.7,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-vit-4240-dbp",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8462-4",
+              "display": "Diastolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-04T04:13:00+00:00",
+        "valueQuantity": {
+          "value": 60.1,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-vit-4268-heartrate",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-04T11:13:00+00:00",
+        "valueQuantity": {
+          "value": 120.6,
+          "unit": "beats/minute",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-vit-4268-resprate",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "9279-1",
+              "display": "Respiratory rate"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-04T11:13:00+00:00",
+        "valueQuantity": {
+          "value": 31.6,
+          "unit": "breaths/minute",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-vit-4268-o2sat",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "59408-5",
+              "display": "Oxygen saturation by pulse oximetry"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-04T11:13:00+00:00",
+        "valueQuantity": {
+          "value": 86.7,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-vit-4268-sbp",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8480-6",
+              "display": "Systolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-04T11:13:00+00:00",
+        "valueQuantity": {
+          "value": 83.8,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-vit-4268-dbp",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8462-4",
+              "display": "Diastolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-04T11:13:00+00:00",
+        "valueQuantity": {
+          "value": 68.4,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-vit-4324-heartrate",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-05T01:13:00+00:00",
+        "valueQuantity": {
+          "value": 114.6,
+          "unit": "beats/minute",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-vit-4324-resprate",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "9279-1",
+              "display": "Respiratory rate"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-05T01:13:00+00:00",
+        "valueQuantity": {
+          "value": 27.7,
+          "unit": "breaths/minute",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-vit-4324-o2sat",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "59408-5",
+              "display": "Oxygen saturation by pulse oximetry"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-05T01:13:00+00:00",
+        "valueQuantity": {
+          "value": 87.2,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-vit-4324-sbp",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8480-6",
+              "display": "Systolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-05T01:13:00+00:00",
+        "valueQuantity": {
+          "value": 80.2,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-vit-4324-dbp",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8462-4",
+              "display": "Diastolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-05T01:13:00+00:00",
+        "valueQuantity": {
+          "value": 72.5,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-vit-4352-heartrate",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-05T08:13:00+00:00",
+        "valueQuantity": {
+          "value": 112.0,
+          "unit": "beats/minute",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-vit-4352-resprate",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "9279-1",
+              "display": "Respiratory rate"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-05T08:13:00+00:00",
+        "valueQuantity": {
+          "value": 26.4,
+          "unit": "breaths/minute",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-vit-4352-o2sat",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "59408-5",
+              "display": "Oxygen saturation by pulse oximetry"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-05T08:13:00+00:00",
+        "valueQuantity": {
+          "value": 86.1,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-vit-4352-sbp",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8480-6",
+              "display": "Systolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-05T08:13:00+00:00",
+        "valueQuantity": {
+          "value": 92.2,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-vit-4352-dbp",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8462-4",
+              "display": "Diastolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-05T08:13:00+00:00",
+        "valueQuantity": {
+          "value": 75.6,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-vit-4380-heartrate",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-05T15:13:00+00:00",
+        "valueQuantity": {
+          "value": 112.7,
+          "unit": "beats/minute",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-vit-4380-resprate",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "9279-1",
+              "display": "Respiratory rate"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-05T15:13:00+00:00",
+        "valueQuantity": {
+          "value": 29.0,
+          "unit": "breaths/minute",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-vit-4380-o2sat",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "59408-5",
+              "display": "Oxygen saturation by pulse oximetry"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-05T15:13:00+00:00",
+        "valueQuantity": {
+          "value": 86.6,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-vit-4380-sbp",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8480-6",
+              "display": "Systolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-05T15:13:00+00:00",
+        "valueQuantity": {
+          "value": 87.7,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-vit-4380-dbp",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8462-4",
+              "display": "Diastolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-05T15:13:00+00:00",
+        "valueQuantity": {
+          "value": 60.7,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-vit-4408-heartrate",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-05T22:13:00+00:00",
+        "valueQuantity": {
+          "value": 109.6,
+          "unit": "beats/minute",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-vit-4408-resprate",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "9279-1",
+              "display": "Respiratory rate"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-05T22:13:00+00:00",
+        "valueQuantity": {
+          "value": 32.8,
+          "unit": "breaths/minute",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-vit-4408-o2sat",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "59408-5",
+              "display": "Oxygen saturation by pulse oximetry"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-05T22:13:00+00:00",
+        "valueQuantity": {
+          "value": 85.3,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-vit-4408-sbp",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8480-6",
+              "display": "Systolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-05T22:13:00+00:00",
+        "valueQuantity": {
+          "value": 101.7,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-vit-4408-dbp",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8462-4",
+              "display": "Diastolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-05T22:13:00+00:00",
+        "valueQuantity": {
+          "value": 54.3,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-lab-170",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2524-7",
+              "display": "Lactate [Moles/volume] in Blood"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-02T06:06:00+00:00",
+        "issued": "2025-05-02T07:22:00+00:00",
+        "valueQuantity": {
+          "value": 1.16,
+          "unit": "mmol/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "mmol/L"
+        },
+        "interpretation": [
+          {
+            "text": "normal"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-lab-170",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2160-0",
+              "display": "Creatinine [Mass/volume] in Serum or Plasma"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-02T06:06:00+00:00",
+        "issued": "2025-05-02T07:22:00+00:00",
+        "valueQuantity": {
+          "value": 0.89,
+          "unit": "mg/dL",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/dL"
+        },
+        "interpretation": [
+          {
+            "text": "normal"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-lab-170",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "6690-2",
+              "display": "Leukocytes [#/volume] in Blood"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-02T06:06:00+00:00",
+        "issued": "2025-05-02T07:22:00+00:00",
+        "valueQuantity": null,
+        "interpretation": []
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-lab-170",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2823-3",
+              "display": "Potassium [Moles/volume] in Serum or Plasma"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-02T06:06:00+00:00",
+        "issued": "2025-05-02T07:22:00+00:00",
+        "valueQuantity": {
+          "value": 4.43,
+          "unit": "mEq/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "mEq/L"
+        },
+        "interpretation": [
+          {
+            "text": "normal"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-lab-171",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "6690-2",
+              "display": "Leukocytes [#/volume] in Blood"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-02T08:24:00+00:00",
+        "issued": "2025-05-02T11:49:00+00:00",
+        "valueQuantity": {
+          "value": 5.31,
+          "unit": "K/uL",
+          "system": "http://unitsofmeasure.org",
+          "code": "K/uL"
+        },
+        "interpretation": [
+          {
+            "text": "normal"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-lab-171",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2524-7",
+              "display": "Lactate [Moles/volume] in Blood"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-02T08:24:00+00:00",
+        "issued": "2025-05-02T11:49:00+00:00",
+        "valueQuantity": {
+          "value": 1.14,
+          "unit": "mmol/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "mmol/L"
+        },
+        "interpretation": [
+          {
+            "text": "normal"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-lab-171",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2823-3",
+              "display": "Potassium [Moles/volume] in Serum or Plasma"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-02T08:24:00+00:00",
+        "issued": "2025-05-02T11:49:00+00:00",
+        "valueQuantity": {
+          "value": 3.99,
+          "unit": "mEq/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "mEq/L"
+        },
+        "interpretation": [
+          {
+            "text": "normal"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-lab-171",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "10839-9",
+              "display": "Troponin I.cardiac [Mass/volume] in Serum or Plasma"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-02T08:24:00+00:00",
+        "issued": "2025-05-02T11:49:00+00:00",
+        "valueQuantity": {
+          "value": 0.02,
+          "unit": "ng/mL",
+          "system": "http://unitsofmeasure.org",
+          "code": "ng/mL"
+        },
+        "interpretation": [
+          {
+            "text": "normal"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-lab-172",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2160-0",
+              "display": "Creatinine [Mass/volume] in Serum or Plasma"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-02T08:27:00+00:00",
+        "issued": "2025-05-02T10:50:00+00:00",
+        "valueQuantity": null,
+        "interpretation": []
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-lab-172",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2823-3",
+              "display": "Potassium [Moles/volume] in Serum or Plasma"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-02T08:27:00+00:00",
+        "issued": "2025-05-02T10:50:00+00:00",
+        "valueQuantity": {
+          "value": 4.77,
+          "unit": "mEq/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "mEq/L"
+        },
+        "interpretation": [
+          {
+            "text": "normal"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-lab-172",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "6690-2",
+              "display": "Leukocytes [#/volume] in Blood"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-02T08:27:00+00:00",
+        "issued": "2025-05-02T10:50:00+00:00",
+        "valueQuantity": null,
+        "interpretation": []
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-lab-172",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "10839-9",
+              "display": "Troponin I.cardiac [Mass/volume] in Serum or Plasma"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-02T08:27:00+00:00",
+        "issued": "2025-05-02T10:50:00+00:00",
+        "valueQuantity": {
+          "value": 0.01,
+          "unit": "ng/mL",
+          "system": "http://unitsofmeasure.org",
+          "code": "ng/mL"
+        },
+        "interpretation": [
+          {
+            "text": "normal"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-lab-173",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2524-7",
+              "display": "Lactate [Moles/volume] in Blood"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-02T18:12:00+00:00",
+        "issued": "2025-05-02T20:19:00+00:00",
+        "valueQuantity": {
+          "value": 1.78,
+          "unit": "mmol/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "mmol/L"
+        },
+        "interpretation": [
+          {
+            "text": "normal"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-lab-173",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "10839-9",
+              "display": "Troponin I.cardiac [Mass/volume] in Serum or Plasma"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-02T18:12:00+00:00",
+        "issued": "2025-05-02T20:19:00+00:00",
+        "valueQuantity": {
+          "value": 0.01,
+          "unit": "ng/mL",
+          "system": "http://unitsofmeasure.org",
+          "code": "ng/mL"
+        },
+        "interpretation": [
+          {
+            "text": "normal"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-lab-173",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2823-3",
+              "display": "Potassium [Moles/volume] in Serum or Plasma"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-02T18:12:00+00:00",
+        "issued": "2025-05-02T20:19:00+00:00",
+        "valueQuantity": {
+          "value": 4.59,
+          "unit": "mEq/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "mEq/L"
+        },
+        "interpretation": [
+          {
+            "text": "normal"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-lab-173",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2160-0",
+              "display": "Creatinine [Mass/volume] in Serum or Plasma"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-02T18:12:00+00:00",
+        "issued": "2025-05-02T20:19:00+00:00",
+        "valueQuantity": {
+          "value": 0.91,
+          "unit": "mg/dL",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/dL"
+        },
+        "interpretation": [
+          {
+            "text": "normal"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-lab-174",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2524-7",
+              "display": "Lactate [Moles/volume] in Blood"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-02T19:53:00+00:00",
+        "issued": "2025-05-03T01:15:00+00:00",
+        "valueQuantity": {
+          "value": 0.56,
+          "unit": "mmol/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "mmol/L"
+        },
+        "interpretation": [
+          {
+            "text": "normal"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-lab-174",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2160-0",
+              "display": "Creatinine [Mass/volume] in Serum or Plasma"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-02T19:53:00+00:00",
+        "issued": "2025-05-03T01:15:00+00:00",
+        "valueQuantity": {
+          "value": 0.89,
+          "unit": "mg/dL",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/dL"
+        },
+        "interpretation": [
+          {
+            "text": "normal"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-lab-174",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2823-3",
+              "display": "Potassium [Moles/volume] in Serum or Plasma"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-02T19:53:00+00:00",
+        "issued": "2025-05-03T01:15:00+00:00",
+        "valueQuantity": {
+          "value": 3.85,
+          "unit": "mEq/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "mEq/L"
+        },
+        "interpretation": [
+          {
+            "text": "normal"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-lab-174",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "6690-2",
+              "display": "Leukocytes [#/volume] in Blood"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-02T19:53:00+00:00",
+        "issued": "2025-05-03T01:15:00+00:00",
+        "valueQuantity": {
+          "value": 8.37,
+          "unit": "K/uL",
+          "system": "http://unitsofmeasure.org",
+          "code": "K/uL"
+        },
+        "interpretation": [
+          {
+            "text": "normal"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-lab-175",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2160-0",
+              "display": "Creatinine [Mass/volume] in Serum or Plasma"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-02T20:59:00+00:00",
+        "issued": "2025-05-03T04:59:00+00:00",
+        "valueQuantity": {
+          "value": 0.87,
+          "unit": "mg/dL",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/dL"
+        },
+        "interpretation": [
+          {
+            "text": "normal"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-lab-175",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "10839-9",
+              "display": "Troponin I.cardiac [Mass/volume] in Serum or Plasma"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-02T20:59:00+00:00",
+        "issued": "2025-05-03T04:59:00+00:00",
+        "valueQuantity": {
+          "value": 0.04,
+          "unit": "ng/mL",
+          "system": "http://unitsofmeasure.org",
+          "code": "ng/mL"
+        },
+        "interpretation": [
+          {
+            "text": "normal"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-lab-175",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2524-7",
+              "display": "Lactate [Moles/volume] in Blood"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-02T20:59:00+00:00",
+        "issued": "2025-05-03T04:59:00+00:00",
+        "valueQuantity": {
+          "value": 1.21,
+          "unit": "mmol/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "mmol/L"
+        },
+        "interpretation": [
+          {
+            "text": "normal"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-lab-175",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "6690-2",
+              "display": "Leukocytes [#/volume] in Blood"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-02T20:59:00+00:00",
+        "issued": "2025-05-03T04:59:00+00:00",
+        "valueQuantity": {
+          "value": 8.82,
+          "unit": "K/uL",
+          "system": "http://unitsofmeasure.org",
+          "code": "K/uL"
+        },
+        "interpretation": [
+          {
+            "text": "normal"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-lab-176",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2823-3",
+              "display": "Potassium [Moles/volume] in Serum or Plasma"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-02T21:22:00+00:00",
+        "issued": "2025-05-03T04:30:00+00:00",
+        "valueQuantity": {
+          "value": 4.64,
+          "unit": "mEq/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "mEq/L"
+        },
+        "interpretation": [
+          {
+            "text": "normal"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-lab-176",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2524-7",
+              "display": "Lactate [Moles/volume] in Blood"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-02T21:22:00+00:00",
+        "issued": "2025-05-03T04:30:00+00:00",
+        "valueQuantity": null,
+        "interpretation": []
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-lab-176",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2160-0",
+              "display": "Creatinine [Mass/volume] in Serum or Plasma"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-02T21:22:00+00:00",
+        "issued": "2025-05-03T04:30:00+00:00",
+        "valueQuantity": {
+          "value": 1.03,
+          "unit": "mg/dL",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/dL"
+        },
+        "interpretation": [
+          {
+            "text": "normal"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-lab-176",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "6690-2",
+              "display": "Leukocytes [#/volume] in Blood"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-02T21:22:00+00:00",
+        "issued": "2025-05-03T04:30:00+00:00",
+        "valueQuantity": {
+          "value": 9.37,
+          "unit": "K/uL",
+          "system": "http://unitsofmeasure.org",
+          "code": "K/uL"
+        },
+        "interpretation": [
+          {
+            "text": "normal"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-lab-177",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2524-7",
+              "display": "Lactate [Moles/volume] in Blood"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-02T23:56:00+00:00",
+        "issued": "2025-05-03T05:19:00+00:00",
+        "valueQuantity": null,
+        "interpretation": []
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-lab-177",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2160-0",
+              "display": "Creatinine [Mass/volume] in Serum or Plasma"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-02T23:56:00+00:00",
+        "issued": "2025-05-03T05:19:00+00:00",
+        "valueQuantity": {
+          "value": 1.33,
+          "unit": "mg/dL",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/dL"
+        },
+        "interpretation": [
+          {
+            "text": "abnormal"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-lab-177",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "6690-2",
+              "display": "Leukocytes [#/volume] in Blood"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-02T23:56:00+00:00",
+        "issued": "2025-05-03T05:19:00+00:00",
+        "valueQuantity": {
+          "value": 7.66,
+          "unit": "K/uL",
+          "system": "http://unitsofmeasure.org",
+          "code": "K/uL"
+        },
+        "interpretation": [
+          {
+            "text": "normal"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-lab-177",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "10839-9",
+              "display": "Troponin I.cardiac [Mass/volume] in Serum or Plasma"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-02T23:56:00+00:00",
+        "issued": "2025-05-03T05:19:00+00:00",
+        "valueQuantity": {
+          "value": 0.27,
+          "unit": "ng/mL",
+          "system": "http://unitsofmeasure.org",
+          "code": "ng/mL"
+        },
+        "interpretation": [
+          {
+            "text": "abnormal"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-lab-178",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2823-3",
+              "display": "Potassium [Moles/volume] in Serum or Plasma"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-03T05:29:00+00:00",
+        "issued": "2025-05-03T09:11:00+00:00",
+        "valueQuantity": {
+          "value": 5.54,
+          "unit": "mEq/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "mEq/L"
+        },
+        "interpretation": [
+          {
+            "text": "abnormal"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-lab-178",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2160-0",
+              "display": "Creatinine [Mass/volume] in Serum or Plasma"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-03T05:29:00+00:00",
+        "issued": "2025-05-03T09:11:00+00:00",
+        "valueQuantity": {
+          "value": 3.02,
+          "unit": "mg/dL",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/dL"
+        },
+        "interpretation": [
+          {
+            "text": "abnormal"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-lab-178",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2524-7",
+              "display": "Lactate [Moles/volume] in Blood"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-03T05:29:00+00:00",
+        "issued": "2025-05-03T09:11:00+00:00",
+        "valueQuantity": {
+          "value": 6.44,
+          "unit": "mmol/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "mmol/L"
+        },
+        "interpretation": [
+          {
+            "text": "abnormal"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-lab-178",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "6690-2",
+              "display": "Leukocytes [#/volume] in Blood"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-03T05:29:00+00:00",
+        "issued": "2025-05-03T09:11:00+00:00",
+        "valueQuantity": {
+          "value": 20.39,
+          "unit": "K/uL",
+          "system": "http://unitsofmeasure.org",
+          "code": "K/uL"
+        },
+        "interpretation": [
+          {
+            "text": "abnormal"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-lab-179",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2160-0",
+              "display": "Creatinine [Mass/volume] in Serum or Plasma"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-03T11:04:00+00:00",
+        "issued": "2025-05-03T14:41:00+00:00",
+        "valueQuantity": {
+          "value": 2.13,
+          "unit": "mg/dL",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/dL"
+        },
+        "interpretation": [
+          {
+            "text": "abnormal"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-lab-179",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2524-7",
+              "display": "Lactate [Moles/volume] in Blood"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-03T11:04:00+00:00",
+        "issued": "2025-05-03T14:41:00+00:00",
+        "valueQuantity": {
+          "value": 5.23,
+          "unit": "mmol/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "mmol/L"
+        },
+        "interpretation": [
+          {
+            "text": "abnormal"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-lab-179",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "10839-9",
+              "display": "Troponin I.cardiac [Mass/volume] in Serum or Plasma"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-03T11:04:00+00:00",
+        "issued": "2025-05-03T14:41:00+00:00",
+        "valueQuantity": {
+          "value": 1.71,
+          "unit": "ng/mL",
+          "system": "http://unitsofmeasure.org",
+          "code": "ng/mL"
+        },
+        "interpretation": [
+          {
+            "text": "abnormal"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-lab-179",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2823-3",
+              "display": "Potassium [Moles/volume] in Serum or Plasma"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-03T11:04:00+00:00",
+        "issued": "2025-05-03T14:41:00+00:00",
+        "valueQuantity": {
+          "value": 6.4,
+          "unit": "mEq/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "mEq/L"
+        },
+        "interpretation": [
+          {
+            "text": "abnormal"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-lab-180",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2823-3",
+              "display": "Potassium [Moles/volume] in Serum or Plasma"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-03T21:04:00+00:00",
+        "issued": "2025-05-04T02:42:00+00:00",
+        "valueQuantity": {
+          "value": 6.4,
+          "unit": "mEq/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "mEq/L"
+        },
+        "interpretation": [
+          {
+            "text": "abnormal"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-lab-180",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "6690-2",
+              "display": "Leukocytes [#/volume] in Blood"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-03T21:04:00+00:00",
+        "issued": "2025-05-04T02:42:00+00:00",
+        "valueQuantity": {
+          "value": 14.57,
+          "unit": "K/uL",
+          "system": "http://unitsofmeasure.org",
+          "code": "K/uL"
+        },
+        "interpretation": [
+          {
+            "text": "abnormal"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-lab-180",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2160-0",
+              "display": "Creatinine [Mass/volume] in Serum or Plasma"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-03T21:04:00+00:00",
+        "issued": "2025-05-04T02:42:00+00:00",
+        "valueQuantity": {
+          "value": 2.39,
+          "unit": "mg/dL",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/dL"
+        },
+        "interpretation": [
+          {
+            "text": "abnormal"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-lab-180",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2524-7",
+              "display": "Lactate [Moles/volume] in Blood"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-03T21:04:00+00:00",
+        "issued": "2025-05-04T02:42:00+00:00",
+        "valueQuantity": {
+          "value": 7.05,
+          "unit": "mmol/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "mmol/L"
+        },
+        "interpretation": [
+          {
+            "text": "abnormal"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-lab-181",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2524-7",
+              "display": "Lactate [Moles/volume] in Blood"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-04T01:27:00+00:00",
+        "issued": "2025-05-04T05:33:00+00:00",
+        "valueQuantity": {
+          "value": 3.68,
+          "unit": "mmol/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "mmol/L"
+        },
+        "interpretation": [
+          {
+            "text": "abnormal"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-lab-181",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "10839-9",
+              "display": "Troponin I.cardiac [Mass/volume] in Serum or Plasma"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-04T01:27:00+00:00",
+        "issued": "2025-05-04T05:33:00+00:00",
+        "valueQuantity": {
+          "value": 3.74,
+          "unit": "ng/mL",
+          "system": "http://unitsofmeasure.org",
+          "code": "ng/mL"
+        },
+        "interpretation": [
+          {
+            "text": "abnormal"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-lab-181",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "6690-2",
+              "display": "Leukocytes [#/volume] in Blood"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-04T01:27:00+00:00",
+        "issued": "2025-05-04T05:33:00+00:00",
+        "valueQuantity": {
+          "value": 18.31,
+          "unit": "K/uL",
+          "system": "http://unitsofmeasure.org",
+          "code": "K/uL"
+        },
+        "interpretation": [
+          {
+            "text": "abnormal"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-lab-181",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2160-0",
+              "display": "Creatinine [Mass/volume] in Serum or Plasma"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-04T01:27:00+00:00",
+        "issued": "2025-05-04T05:33:00+00:00",
+        "valueQuantity": {
+          "value": 2.26,
+          "unit": "mg/dL",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/dL"
+        },
+        "interpretation": [
+          {
+            "text": "abnormal"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-lab-182",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2160-0",
+              "display": "Creatinine [Mass/volume] in Serum or Plasma"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-04T23:02:00+00:00",
+        "issued": "2025-05-05T02:56:00+00:00",
+        "valueQuantity": {
+          "value": 2.49,
+          "unit": "mg/dL",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/dL"
+        },
+        "interpretation": [
+          {
+            "text": "abnormal"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-lab-182",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2823-3",
+              "display": "Potassium [Moles/volume] in Serum or Plasma"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-04T23:02:00+00:00",
+        "issued": "2025-05-05T02:56:00+00:00",
+        "valueQuantity": null,
+        "interpretation": []
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-lab-182",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2524-7",
+              "display": "Lactate [Moles/volume] in Blood"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-04T23:02:00+00:00",
+        "issued": "2025-05-05T02:56:00+00:00",
+        "valueQuantity": {
+          "value": 3.78,
+          "unit": "mmol/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "mmol/L"
+        },
+        "interpretation": [
+          {
+            "text": "abnormal"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-lab-182",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "6690-2",
+              "display": "Leukocytes [#/volume] in Blood"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-04T23:02:00+00:00",
+        "issued": "2025-05-05T02:56:00+00:00",
+        "valueQuantity": {
+          "value": 17.32,
+          "unit": "K/uL",
+          "system": "http://unitsofmeasure.org",
+          "code": "K/uL"
+        },
+        "interpretation": [
+          {
+            "text": "abnormal"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-lab-183",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2160-0",
+              "display": "Creatinine [Mass/volume] in Serum or Plasma"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-05T06:21:00+00:00",
+        "issued": "2025-05-05T09:58:00+00:00",
+        "valueQuantity": {
+          "value": 2.02,
+          "unit": "mg/dL",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/dL"
+        },
+        "interpretation": [
+          {
+            "text": "abnormal"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-lab-183",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2823-3",
+              "display": "Potassium [Moles/volume] in Serum or Plasma"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-05T06:21:00+00:00",
+        "issued": "2025-05-05T09:58:00+00:00",
+        "valueQuantity": {
+          "value": 5.94,
+          "unit": "mEq/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "mEq/L"
+        },
+        "interpretation": [
+          {
+            "text": "abnormal"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-lab-183",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2524-7",
+              "display": "Lactate [Moles/volume] in Blood"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-05T06:21:00+00:00",
+        "issued": "2025-05-05T09:58:00+00:00",
+        "valueQuantity": {
+          "value": 4.52,
+          "unit": "mmol/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "mmol/L"
+        },
+        "interpretation": [
+          {
+            "text": "abnormal"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-lab-183",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "10839-9",
+              "display": "Troponin I.cardiac [Mass/volume] in Serum or Plasma"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-05T06:21:00+00:00",
+        "issued": "2025-05-05T09:58:00+00:00",
+        "valueQuantity": {
+          "value": 4.84,
+          "unit": "ng/mL",
+          "system": "http://unitsofmeasure.org",
+          "code": "ng/mL"
+        },
+        "interpretation": [
+          {
+            "text": "abnormal"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-lab-184",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2524-7",
+              "display": "Lactate [Moles/volume] in Blood"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-05T15:52:00+00:00",
+        "issued": "2025-05-05T20:00:00+00:00",
+        "valueQuantity": {
+          "value": 5.5,
+          "unit": "mmol/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "mmol/L"
+        },
+        "interpretation": [
+          {
+            "text": "abnormal"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-lab-184",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2823-3",
+              "display": "Potassium [Moles/volume] in Serum or Plasma"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-05T15:52:00+00:00",
+        "issued": "2025-05-05T20:00:00+00:00",
+        "valueQuantity": {
+          "value": 5.89,
+          "unit": "mEq/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "mEq/L"
+        },
+        "interpretation": [
+          {
+            "text": "abnormal"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-lab-184",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "6690-2",
+              "display": "Leukocytes [#/volume] in Blood"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-05T15:52:00+00:00",
+        "issued": "2025-05-05T20:00:00+00:00",
+        "valueQuantity": {
+          "value": 13.79,
+          "unit": "K/uL",
+          "system": "http://unitsofmeasure.org",
+          "code": "K/uL"
+        },
+        "interpretation": [
+          {
+            "text": "abnormal"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-lab-184",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "10839-9",
+              "display": "Troponin I.cardiac [Mass/volume] in Serum or Plasma"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-05T15:52:00+00:00",
+        "issued": "2025-05-05T20:00:00+00:00",
+        "valueQuantity": {
+          "value": 3.27,
+          "unit": "ng/mL",
+          "system": "http://unitsofmeasure.org",
+          "code": "ng/mL"
+        },
+        "interpretation": [
+          {
+            "text": "abnormal"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-lab-185",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2823-3",
+              "display": "Potassium [Moles/volume] in Serum or Plasma"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-05T17:19:00+00:00",
+        "issued": "2025-05-05T19:33:00+00:00",
+        "valueQuantity": null,
+        "interpretation": []
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-lab-185",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "6690-2",
+              "display": "Leukocytes [#/volume] in Blood"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-05T17:19:00+00:00",
+        "issued": "2025-05-05T19:33:00+00:00",
+        "valueQuantity": {
+          "value": 13.29,
+          "unit": "K/uL",
+          "system": "http://unitsofmeasure.org",
+          "code": "K/uL"
+        },
+        "interpretation": [
+          {
+            "text": "abnormal"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-lab-185",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "10839-9",
+              "display": "Troponin I.cardiac [Mass/volume] in Serum or Plasma"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-05T17:19:00+00:00",
+        "issued": "2025-05-05T19:33:00+00:00",
+        "valueQuantity": {
+          "value": 2.79,
+          "unit": "ng/mL",
+          "system": "http://unitsofmeasure.org",
+          "code": "ng/mL"
+        },
+        "interpretation": [
+          {
+            "text": "abnormal"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-lab-185",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2160-0",
+              "display": "Creatinine [Mass/volume] in Serum or Plasma"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-05T17:19:00+00:00",
+        "issued": "2025-05-05T19:33:00+00:00",
+        "valueQuantity": {
+          "value": 3.4,
+          "unit": "mg/dL",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/dL"
+        },
+        "interpretation": [
+          {
+            "text": "abnormal"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-lab-186",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2160-0",
+              "display": "Creatinine [Mass/volume] in Serum or Plasma"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-05T19:22:00+00:00",
+        "issued": "2025-05-05T21:32:00+00:00",
+        "valueQuantity": {
+          "value": 2.34,
+          "unit": "mg/dL",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/dL"
+        },
+        "interpretation": [
+          {
+            "text": "abnormal"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-lab-186",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "6690-2",
+              "display": "Leukocytes [#/volume] in Blood"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-05T19:22:00+00:00",
+        "issued": "2025-05-05T21:32:00+00:00",
+        "valueQuantity": {
+          "value": 17.02,
+          "unit": "K/uL",
+          "system": "http://unitsofmeasure.org",
+          "code": "K/uL"
+        },
+        "interpretation": [
+          {
+            "text": "abnormal"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-lab-186",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2823-3",
+              "display": "Potassium [Moles/volume] in Serum or Plasma"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-05T19:22:00+00:00",
+        "issued": "2025-05-05T21:32:00+00:00",
+        "valueQuantity": {
+          "value": 6.15,
+          "unit": "mEq/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "mEq/L"
+        },
+        "interpretation": [
+          {
+            "text": "abnormal"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000017-lab-186",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2524-7",
+              "display": "Lactate [Moles/volume] in Blood"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "encounter": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-05T19:22:00+00:00",
+        "issued": "2025-05-05T21:32:00+00:00",
+        "valueQuantity": null,
+        "interpretation": []
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "id": "med-1_017N68",
+        "status": "active",
+        "medicationCodeableConcept": {
+          "text": "metoprolol"
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "context": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-01T19:54:00+00:00",
+        "dosage": [
+          {
+            "text": "25mg PO BID"
+          }
+        ],
+        "reasonCode": [
+          {
+            "text": "hypertension"
+          }
+        ],
+        "derivedFrom": [
+          {
+            "reference": "DocumentReference/90000017-N68"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "id": "med-1_017N69",
+        "status": "active",
+        "medicationCodeableConcept": {
+          "text": "albuterol"
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "context": {
+          "reference": "Encounter/92000017"
+        },
+        "effectiveDateTime": "2025-05-04T15:11:00+00:00",
+        "dosage": [
+          {
+            "text": "2.5mg nebulized every 4 hours as needed"
+          }
+        ],
+        "reasonCode": [
+          {
+            "text": "wheezing"
+          }
+        ],
+        "derivedFrom": [
+          {
+            "reference": "DocumentReference/90000017-N69"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "90000017-N68",
+        "status": "current",
+        "type": {
+          "text": "admission"
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "context": {
+          "encounter": [
+            {
+              "reference": "Encounter/92000017"
+            }
+          ],
+          "period": {
+            "start": "2025-05-01T12:58:00+00:00"
+          }
+        },
+        "date": "2025-05-01T19:54:00+00:00",
+        "author": [
+          {
+            "type": "clinician"
+          }
+        ],
+        "content": [
+          {
+            "attachment": {
+              "contentType": "text/plain",
+              "data": "UGF0aWVudCBhZG1pdHRlZCBmb3Igc2hvcnRuZXNzIG9mIGJyZWF0aC4gQmFzZWxpbmUgdml0YWxzIHJldmlld2VkLiBQbGFuOiBtb25pdG9yIGFuZCB0cmVhdCBwZXIgcHJvdG9jb2wuIENhc2UgZGlzY3Vzc2VkIHdpdGggdGhlIHByaW1hcnkgdGVhbS4gU3RhcnRlZCBtZXRvcHJvbG9sIDI1bWcgUE8gQklEIGZvciBoeXBlcnRlbnNpb24uIEFsbGVyZ2llcyByZXZpZXdlZCwgbm9uZSByZXBvcnRlZC4="
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "90000017-N74",
+        "status": "current",
+        "type": {
+          "text": "caregiver"
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "context": {
+          "encounter": [
+            {
+              "reference": "Encounter/92000017"
+            }
+          ],
+          "period": {
+            "start": "2025-05-03T03:37:00+00:00"
+          }
+        },
+        "date": "2025-05-03T03:51:00+00:00",
+        "author": [
+          {
+            "type": "caregiver"
+          }
+        ],
+        "content": [
+          {
+            "attachment": {
+              "contentType": "text/plain",
+              "data": "Q2FyZWdpdmVyIHByZXNlbnQgYXQgYmVkc2lkZSwgbm90ZXMgcGF0aWVudCBpcyBtb3JlIHVuc2V0dGxlZCB0aGFuIGlzIHR5cGljYWwgZm9yIHRoZW0u"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "90000017-N90008",
+        "status": "current",
+        "type": {
+          "text": "ecg_interpretation"
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "context": {
+          "encounter": [
+            {
+              "reference": "Encounter/92000017"
+            }
+          ],
+          "period": {
+            "start": "2025-05-01T16:41:00+00:00"
+          }
+        },
+        "date": "2025-05-03T04:42:00+00:00",
+        "author": [
+          {
+            "type": "clinician"
+          }
+        ],
+        "content": [
+          {
+            "attachment": {
+              "contentType": "text/plain",
+              "data": "RUNHIHJldmlld2VkOiBzaW51cyByaHl0aG0sIG90aGVyd2lzZSBub3JtYWwgZWNnLiBDbGluaWNhbGx5IGNvcnJlbGF0ZWQgd2l0aCBjdXJyZW50IHByZXNlbnRhdGlvbiwgcGxhbiB1bmNoYW5nZWQu"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "90000017-N71",
+        "status": "current",
+        "type": {
+          "text": "routine_stable"
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "context": {
+          "encounter": [
+            {
+              "reference": "Encounter/92000017"
+            }
+          ],
+          "period": {
+            "start": "2025-05-02T10:13:00+00:00"
+          }
+        },
+        "date": "2025-05-03T08:39:00+00:00",
+        "author": [
+          {
+            "type": "clinician"
+          }
+        ],
+        "content": [
+          {
+            "attachment": {
+              "contentType": "text/plain",
+              "data": "T3Zlcm5pZ2h0IGNvdXJzZSB1bnJlbWFya2FibGUuIFZpdGFscyB3aXRoaW4gcGF0aWVudCdzIHVzdWFsIHJhbmdlLiBDb250aW51ZSBtb25pdG9yaW5nLg=="
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "90000017-N73",
+        "status": "current",
+        "type": {
+          "text": "event_clinician"
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "context": {
+          "encounter": [
+            {
+              "reference": "Encounter/92000017"
+            }
+          ],
+          "period": {
+            "start": "2025-05-03T01:02:00+00:00"
+          }
+        },
+        "date": "2025-05-03T19:22:00+00:00",
+        "author": [
+          {
+            "type": "clinician"
+          }
+        ],
+        "content": [
+          {
+            "attachment": {
+              "contentType": "text/plain",
+              "data": "TnVyc2luZyByZXBvcnRzIHBhdGllbnQgYXBwZWFycyBtb3JlIHVud2VsbCBzaW5jZSBsYXN0IGNoZWNrLiBSZWFzc2Vzc2VkLCBvcmRlcnMgdXBkYXRlZCBhY2NvcmRpbmdseS4="
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "90000017-N69",
+        "status": "current",
+        "type": {
+          "text": "routine_stable"
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "context": {
+          "encounter": [
+            {
+              "reference": "Encounter/92000017"
+            }
+          ],
+          "period": {
+            "start": "2025-05-04T05:19:00+00:00"
+          }
+        },
+        "date": "2025-05-04T15:11:00+00:00",
+        "author": [
+          {
+            "type": "clinician"
+          }
+        ],
+        "content": [
+          {
+            "attachment": {
+              "contentType": "text/plain",
+              "data": "Tm8gYWN1dGUgY2hhbmdlcyBvdmVybmlnaHQuIFBhdGllbnQgc3RhYmxlLCB0b2xlcmF0aW5nIGN1cnJlbnQgcGxhbiBvZiBjYXJlLiBPdmVybmlnaHQgdml0YWxzIHdpdGhpbiB0aGUgcGF0aWVudCdzIGFjY2VwdGFibGUgcmFuZ2UuIFBhaW4gd2VsbCBjb250cm9sbGVkIG9uIGN1cnJlbnQgcmVnaW1lbi4gQ29udGludWVzIG9uIGFsYnV0ZXJvbCAyLjVtZyBuZWJ1bGl6ZWQgZXZlcnkgNCBob3VycyBhcyBuZWVkZWQgZm9yIHdoZWV6aW5nLCB0b2xlcmF0aW5nIHdlbGwuIE5vIG5ldyBjb21wbGFpbnRzIHJlcG9ydGVkIGJ5IHBhdGllbnQgdGhpcyBzaGlmdC4="
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "90000017-N70",
+        "status": "current",
+        "type": {
+          "text": "routine_stable"
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "context": {
+          "encounter": [
+            {
+              "reference": "Encounter/92000017"
+            }
+          ],
+          "period": {
+            "start": "2025-05-04T04:09:00+00:00"
+          }
+        },
+        "date": "2025-05-04T18:24:00+00:00",
+        "author": [
+          {
+            "type": "clinician"
+          }
+        ],
+        "content": [
+          {
+            "attachment": {
+              "contentType": "text/plain",
+              "data": "T3Zlcm5pZ2h0IGNvdXJzZSB1bnJlbWFya2FibGUuIFZpdGFscyB3aXRoaW4gcGF0aWVudCdzIHVzdWFsIHJhbmdlLiBDb250aW51ZSBtb25pdG9yaW5nLg=="
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "90000017-N72",
+        "status": "current",
+        "type": {
+          "text": "routine_stable"
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "context": {
+          "encounter": [
+            {
+              "reference": "Encounter/92000017"
+            }
+          ],
+          "period": {
+            "start": "2025-05-04T12:38:00+00:00"
+          }
+        },
+        "date": "2025-05-05T11:29:00+00:00",
+        "author": [
+          {
+            "type": "clinician"
+          }
+        ],
+        "content": [
+          {
+            "attachment": {
+              "contentType": "text/plain",
+              "data": "Tm8gYWN1dGUgY2hhbmdlcyBvdmVybmlnaHQuIFBhdGllbnQgc3RhYmxlLCB0b2xlcmF0aW5nIGN1cnJlbnQgcGxhbiBvZiBjYXJlLg=="
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "90000017-N75",
+        "status": "current",
+        "type": {
+          "text": "discharge"
+        },
+        "subject": {
+          "reference": "Patient/90000017"
+        },
+        "context": {
+          "encounter": [
+            {
+              "reference": "Encounter/92000017"
+            }
+          ],
+          "period": {
+            "start": "2025-05-05T22:38:00+00:00"
+          }
+        },
+        "date": "2025-05-07T15:12:00+00:00",
+        "author": [
+          {
+            "type": "clinician"
+          }
+        ],
+        "content": [
+          {
+            "attachment": {
+              "contentType": "text/plain",
+              "data": "UGF0aWVudCdzIGNvbmRpdGlvbiBpbXByb3ZlZCAvIHN0YWJpbGl6ZWQgb3ZlciB0aGUgYWRtaXNzaW9uLiBEaXNjaGFyZ2VkIHdpdGggZm9sbG93LXVwIHBsYW4gaW4gcGxhY2Uu"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

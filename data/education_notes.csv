@@ -1,0 +1,37 @@
+student_id,note_id,note_type,event_time,storetime,text
+STU001,STU001-N1,routine_checkin,2026-02-12 00:00:00,2026-02-12 05:03:00,Routine check-in. Student engagement and performance within expected range.
+STU001,STU001-N2,concern_flagged,2026-03-17 00:00:00,2026-03-28 07:45:00,Noticed declining engagement and quiz performance over recent weeks. Flagging for follow-up.
+STU001,STU001-N3,intervention,2026-03-30 05:16:00,2026-03-30 06:37:00,Met with student to discuss course difficulties. Support plan put in place.
+STU002,STU002-N1,routine_checkin,2026-02-12 00:00:00,2026-02-12 04:21:00,Routine check-in. Student engagement and performance within expected range.
+STU002,STU002-N2,concern_flagged,2026-03-16 00:00:00,2026-03-20 07:57:00,Noticed declining engagement and quiz performance over recent weeks. Flagging for follow-up.
+STU002,STU002-N3,intervention,2026-03-22 14:38:00,2026-03-22 18:24:00,Met with student to discuss course difficulties. Support plan put in place.
+STU003,STU003-N1,routine_checkin,2026-02-12 00:00:00,2026-02-12 03:42:00,Routine check-in. Student engagement and performance within expected range.
+STU004,STU004-N1,routine_checkin,2026-02-12 00:00:00,2026-02-12 01:52:00,Routine check-in. Student engagement and performance within expected range.
+STU005,STU005-N1,routine_checkin,2026-02-12 00:00:00,2026-02-12 05:44:00,Routine check-in. Student engagement and performance within expected range.
+STU006,STU006-N1,routine_checkin,2026-02-12 00:00:00,2026-02-12 03:33:00,Routine check-in. Student engagement and performance within expected range.
+STU007,STU007-N1,routine_checkin,2026-02-12 00:00:00,2026-02-12 04:22:00,Routine check-in. Student engagement and performance within expected range.
+STU008,STU008-N1,routine_checkin,2026-02-12 00:00:00,2026-02-12 02:36:00,Routine check-in. Student engagement and performance within expected range.
+STU008,STU008-N2,concern_flagged,2026-03-02 00:00:00,2026-03-11 04:40:00,Noticed declining engagement and quiz performance over recent weeks. Flagging for follow-up.
+STU008,STU008-N3,intervention,2026-03-12 15:20:00,2026-03-12 18:23:00,Met with student to discuss course difficulties. Support plan put in place.
+STU009,STU009-N1,routine_checkin,2026-02-12 00:00:00,2026-02-12 03:17:00,Routine check-in. Student engagement and performance within expected range.
+STU010,STU010-N1,routine_checkin,2026-02-12 00:00:00,2026-02-12 03:49:00,Routine check-in. Student engagement and performance within expected range.
+STU011,STU011-N1,routine_checkin,2026-02-12 00:00:00,2026-02-12 05:46:00,Routine check-in. Student engagement and performance within expected range.
+STU011,STU011-N2,concern_flagged,2026-02-28 00:00:00,2026-03-07 20:35:00,Noticed declining engagement and quiz performance over recent weeks. Flagging for follow-up.
+STU011,STU011-N3,intervention,2026-03-09 08:53:00,2026-03-09 09:59:00,Met with student to discuss course difficulties. Support plan put in place.
+STU012,STU012-N1,routine_checkin,2026-02-12 00:00:00,2026-02-12 04:18:00,Routine check-in. Student engagement and performance within expected range.
+STU012,STU012-N2,concern_flagged,2026-03-14 00:00:00,2026-03-19 06:36:00,Noticed declining engagement and quiz performance over recent weeks. Flagging for follow-up.
+STU012,STU012-N3,intervention,2026-03-20 08:07:00,2026-03-20 09:11:00,Met with student to discuss course difficulties. Support plan put in place.
+STU013,STU013-N1,routine_checkin,2026-02-12 00:00:00,2026-02-12 04:57:00,Routine check-in. Student engagement and performance within expected range.
+STU014,STU014-N1,routine_checkin,2026-02-12 00:00:00,2026-02-12 03:26:00,Routine check-in. Student engagement and performance within expected range.
+STU014,STU014-N2,concern_flagged,2026-03-04 00:00:00,2026-03-13 01:53:00,Noticed declining engagement and quiz performance over recent weeks. Flagging for follow-up.
+STU014,STU014-N3,intervention,2026-03-15 14:28:00,2026-03-15 16:54:00,Met with student to discuss course difficulties. Support plan put in place.
+STU015,STU015-N1,routine_checkin,2026-02-12 00:00:00,2026-02-12 04:29:00,Routine check-in. Student engagement and performance within expected range.
+STU016,STU016-N1,routine_checkin,2026-02-12 00:00:00,2026-02-12 02:17:00,Routine check-in. Student engagement and performance within expected range.
+STU017,STU017-N1,routine_checkin,2026-02-12 00:00:00,2026-02-12 05:40:00,Routine check-in. Student engagement and performance within expected range.
+STU018,STU018-N1,routine_checkin,2026-02-12 00:00:00,2026-02-12 05:12:00,Routine check-in. Student engagement and performance within expected range.
+STU018,STU018-N2,concern_flagged,2026-03-06 00:00:00,2026-03-12 06:49:00,Noticed declining engagement and quiz performance over recent weeks. Flagging for follow-up.
+STU018,STU018-N3,intervention,2026-03-14 13:09:00,2026-03-14 14:21:00,Met with student to discuss course difficulties. Support plan put in place.
+STU019,STU019-N1,routine_checkin,2026-02-12 00:00:00,2026-02-12 02:17:00,Routine check-in. Student engagement and performance within expected range.
+STU019,STU019-N2,concern_flagged,2026-03-07 00:00:00,2026-03-13 11:17:00,Noticed declining engagement and quiz performance over recent weeks. Flagging for follow-up.
+STU019,STU019-N3,intervention,2026-03-15 05:26:00,2026-03-15 07:07:00,Met with student to discuss course difficulties. Support plan put in place.
+STU020,STU020-N1,routine_checkin,2026-02-12 00:00:00,2026-02-12 04:36:00,Routine check-in. Student engagement and performance within expected range.

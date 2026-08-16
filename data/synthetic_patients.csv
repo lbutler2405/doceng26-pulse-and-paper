@@ -1,0 +1,76 @@
+subject_id,hadm_id,stay_id,age,gender,careunit,admittime,dischtime,hospital_complexity_tier,entanglement_tier,population_context,socioeconomic_context,admit_reason,comorbidities,has_cardiac_history
+90000001,92000001,93000001,35,M,CVICU,2024-09-17 10:43:00,2024-09-18 03:04:00,A_minimal,high,none,standard_resourced,arrhythmia,"heart failure, type 2 diabetes",True
+90000002,92000002,93000002,50,M,CVICU,2025-09-17 22:20:00,2025-09-21 17:52:00,B_moderate,medium,none,under_resourced,altered mental status,"coronary artery disease, chronic kidney disease",True
+90000003,92000003,93000003,71,M,CCU,2024-04-01 09:37:00,2024-04-08 21:07:00,C_complex,low,neurodivergent,under_resourced,sepsis workup,"prior myocardial infarction, atrial fibrillation",True
+90000004,92000004,93000004,73,M,CVICU,2024-04-08 00:26:00,2024-04-11 06:35:00,B_moderate,high,none,standard_resourced,altered mental status,coronary artery disease,True
+90000005,92000005,93000005,60,M,SICU,2024-11-26 07:25:00,2024-11-29 08:34:00,C_complex,low,dementia_mild,standard_resourced,shortness of breath,prior myocardial infarction,True
+90000006,92000006,93000006,76,M,MICU,2025-08-20 14:33:00,2025-08-21 12:34:00,A_minimal,high,disability,standard_resourced,arrhythmia,none,False
+90000007,92000007,93000007,67,F,CVICU,2024-01-16 23:38:00,2024-01-17 17:27:00,A_minimal,high,none,standard_resourced,arrhythmia,COPD,False
+90000008,92000008,93000008,71,F,SICU,2024-09-10 08:28:00,2024-09-14 16:40:00,C_complex,high,none,standard_resourced,sepsis workup,none,False
+90000009,92000009,93000009,84,F,CVICU,2025-09-24 06:12:00,2025-09-25 16:38:00,B_moderate,high,dementia_moderate,standard_resourced,altered mental status,atrial fibrillation,True
+90000010,92000010,93000010,66,F,CCU,2025-03-30 23:22:00,2025-04-09 05:25:00,C_complex,low,neurodivergent,under_resourced,arrhythmia,none,False
+90000011,92000011,93000011,86,F,MICU,2024-08-31 09:00:00,2024-09-02 05:19:00,B_moderate,high,neurodivergent,standard_resourced,chest pain,COPD,False
+90000012,92000012,93000012,95,F,SICU,2024-08-20 14:20:00,2024-08-25 16:10:00,C_complex,medium,dementia_mild,under_resourced,altered mental status,coronary artery disease,True
+90000013,92000013,93000013,39,M,CCU,2025-06-22 03:45:00,2025-06-24 08:56:00,A_minimal,medium,dementia_moderate,under_resourced,post-procedural monitoring,chronic kidney disease,False
+90000014,92000014,93000014,52,F,SICU,2024-12-26 18:51:00,2025-01-01 03:16:00,C_complex,high,none,standard_resourced,chest pain,chronic kidney disease,False
+90000015,92000015,93000015,88,F,CVICU,2025-04-08 12:30:00,2025-04-09 15:00:00,A_minimal,medium,none,standard_resourced,hypotension,"heart failure, atrial fibrillation",True
+90000016,92000016,93000016,89,M,MICU,2025-09-04 09:10:00,2025-09-06 07:29:00,A_minimal,high,none,standard_resourced,arrhythmia,none,False
+90000017,92000017,93000017,70,F,MICU,2025-05-01 12:58:00,2025-05-05 22:38:00,C_complex,high,dementia_severe,standard_resourced,shortness of breath,chronic kidney disease,False
+90000018,92000018,93000018,57,M,SICU,2025-10-09 09:21:00,2025-10-13 14:06:00,C_complex,high,disability,standard_resourced,hypotension,type 2 diabetes,False
+90000019,92000019,93000019,95,F,CCU,2024-03-18 04:42:00,2024-03-19 08:22:00,A_minimal,medium,none,under_resourced,sepsis workup,"prior myocardial infarction, heart failure, chronic kidney disease",True
+90000020,92000020,93000020,57,M,MICU,2024-11-13 23:10:00,2024-11-14 10:03:00,A_minimal,medium,disability,standard_resourced,altered mental status,COPD,False
+90000021,92000021,93000021,59,M,SICU,2025-10-06 20:07:00,2025-10-07 17:36:00,A_minimal,high,dementia_mild,under_resourced,post-procedural monitoring,hypertension,True
+90000022,92000022,93000022,56,F,SICU,2024-12-20 00:10:00,2024-12-21 04:17:00,A_minimal,medium,none,under_resourced,post-procedural monitoring,heart failure,True
+90000023,92000023,93000023,70,F,SICU,2025-08-06 11:18:00,2025-08-07 01:51:00,A_minimal,medium,none,under_resourced,shortness of breath,none,False
+90000024,92000024,93000024,48,F,CVICU,2025-01-10 17:46:00,2025-01-12 20:10:00,B_moderate,high,none,standard_resourced,arrhythmia,atrial fibrillation,True
+90000025,92000025,93000025,69,F,MICU,2024-09-14 14:38:00,2024-09-24 09:35:00,C_complex,high,neurodivergent,standard_resourced,acute kidney injury,none,False
+90000026,92000026,93000026,73,F,CVICU,2025-04-02 13:58:00,2025-04-04 18:34:00,A_minimal,medium,disability,under_resourced,sepsis workup,none,False
+90000027,92000027,93000027,47,M,CCU,2025-05-23 01:58:00,2025-05-26 03:59:00,B_moderate,medium,disability,under_resourced,post-procedural monitoring,coronary artery disease,True
+90000028,92000028,93000028,87,F,CVICU,2024-03-08 03:00:00,2024-03-09 09:32:00,B_moderate,high,none,standard_resourced,chest pain,"hypertension, type 2 diabetes",True
+90000029,92000029,93000029,66,M,CVICU,2024-03-24 22:13:00,2024-03-25 16:37:00,A_minimal,low,neurodivergent,standard_resourced,arrhythmia,none,False
+90000030,92000030,93000030,81,M,CVICU,2024-04-20 11:16:00,2024-04-22 12:41:00,B_moderate,medium,none,standard_resourced,altered mental status,atrial fibrillation,True
+90000031,92000031,93000031,53,M,CVICU,2025-05-18 08:15:00,2025-05-20 03:54:00,A_minimal,high,none,standard_resourced,sepsis workup,hypertension,True
+90000032,92000032,93000032,89,F,CCU,2024-07-26 04:35:00,2024-07-27 06:15:00,B_moderate,low,dementia_moderate,standard_resourced,shortness of breath,none,False
+90000033,92000033,93000033,65,M,CCU,2024-03-05 04:02:00,2024-03-06 05:35:00,A_minimal,medium,dementia_mild,under_resourced,arrhythmia,prior myocardial infarction,True
+90000034,92000034,93000034,59,F,SICU,2025-02-28 21:59:00,2025-03-02 08:50:00,A_minimal,low,none,standard_resourced,acute kidney injury,none,False
+90000035,92000035,93000035,67,M,CCU,2025-03-17 19:47:00,2025-03-19 15:54:00,A_minimal,high,none,standard_resourced,chest pain,heart failure,True
+90000036,92000036,93000036,77,M,CVICU,2025-09-11 13:58:00,2025-09-14 07:21:00,B_moderate,low,disability,under_resourced,post-procedural monitoring,hypertension,True
+90000037,92000037,93000037,71,F,CCU,2025-02-09 06:47:00,2025-02-11 04:02:00,B_moderate,low,none,standard_resourced,hypotension,prior myocardial infarction,True
+90000038,92000038,93000038,94,F,MICU,2024-10-27 02:50:00,2024-10-30 16:31:00,B_moderate,high,none,standard_resourced,hypotension,none,False
+90000039,92000039,93000039,58,F,SICU,2025-01-31 17:07:00,2025-02-02 03:22:00,B_moderate,low,none,standard_resourced,sepsis workup,none,False
+90000040,92000040,93000040,47,M,CCU,2025-09-13 08:45:00,2025-09-17 13:23:00,B_moderate,medium,none,standard_resourced,acute kidney injury,none,False
+90000041,92000041,93000041,74,M,MICU,2024-08-22 01:22:00,2024-08-23 23:47:00,B_moderate,low,none,standard_resourced,shortness of breath,hypertension,True
+90000042,92000042,93000042,78,F,MICU,2025-11-28 13:34:00,2025-12-02 02:08:00,C_complex,high,dementia_mild,standard_resourced,post-procedural monitoring,none,False
+90000043,92000043,93000043,63,M,MICU,2025-08-09 08:40:00,2025-08-12 15:54:00,C_complex,high,disability,standard_resourced,hypotension,none,False
+90000044,92000044,93000044,58,M,SICU,2024-04-15 15:28:00,2024-04-20 02:14:00,B_moderate,low,dementia_severe,under_resourced,hypotension,hypertension,True
+90000045,92000045,93000045,29,F,MICU,2025-03-31 01:07:00,2025-04-01 03:57:00,A_minimal,medium,none,standard_resourced,arrhythmia,type 2 diabetes,False
+90000046,92000046,93000046,70,F,SICU,2025-02-15 19:14:00,2025-02-19 17:18:00,C_complex,medium,none,standard_resourced,post-procedural monitoring,"heart failure, COPD",True
+90000047,92000047,93000047,70,M,CCU,2024-01-19 06:22:00,2024-01-22 08:00:00,B_moderate,medium,neurodivergent,under_resourced,sepsis workup,none,False
+90000048,92000048,93000048,67,M,CCU,2025-09-25 00:29:00,2025-09-25 21:54:00,A_minimal,low,none,under_resourced,altered mental status,coronary artery disease,True
+90000049,92000049,93000049,47,M,CCU,2025-05-29 08:19:00,2025-06-03 09:07:00,C_complex,medium,dementia_moderate,under_resourced,hypotension,"heart failure, type 2 diabetes",True
+90000050,92000050,93000050,57,M,CVICU,2024-02-29 21:44:00,2024-03-02 14:27:00,B_moderate,medium,none,under_resourced,sepsis workup,type 2 diabetes,False
+90000051,92000051,93000051,39,M,MICU,2025-08-29 12:41:00,2025-09-01 05:13:00,B_moderate,high,dementia_moderate,standard_resourced,acute kidney injury,chronic kidney disease,False
+90000052,92000052,93000052,65,M,CCU,2025-04-15 08:34:00,2025-04-17 04:26:00,B_moderate,low,none,standard_resourced,sepsis workup,atrial fibrillation,True
+90000053,92000053,93000053,35,F,SICU,2024-08-28 00:53:00,2024-08-30 21:25:00,B_moderate,high,none,standard_resourced,chest pain,chronic kidney disease,False
+90000054,92000054,93000054,74,F,CVICU,2024-12-13 23:17:00,2024-12-15 19:35:00,B_moderate,high,none,standard_resourced,sepsis workup,hypertension,True
+90000055,92000055,93000055,67,M,SICU,2024-07-19 00:55:00,2024-07-19 16:54:00,A_minimal,low,none,under_resourced,arrhythmia,chronic kidney disease,False
+90000056,92000056,93000056,76,M,CCU,2024-04-19 15:32:00,2024-04-22 20:26:00,B_moderate,low,dementia_moderate,standard_resourced,shortness of breath,none,False
+90000057,92000057,93000057,74,M,CVICU,2024-05-10 03:57:00,2024-05-10 23:40:00,A_minimal,low,dementia_mild,standard_resourced,hypotension,"coronary artery disease, chronic kidney disease",True
+90000058,92000058,93000058,79,M,CVICU,2024-02-16 07:23:00,2024-02-17 01:58:00,B_moderate,medium,dementia_severe,standard_resourced,arrhythmia,none,False
+90000059,92000059,93000059,50,F,SICU,2024-01-02 06:29:00,2024-01-03 14:36:00,A_minimal,low,none,standard_resourced,chest pain,none,False
+90000060,92000060,93000060,75,M,CVICU,2024-12-02 13:25:00,2024-12-02 22:01:00,A_minimal,low,neurodivergent,standard_resourced,altered mental status,prior myocardial infarction,True
+90000061,92000061,93000061,71,F,MICU,2024-01-07 15:54:00,2024-01-12 18:18:00,C_complex,low,dementia_severe,under_resourced,chest pain,none,False
+90000062,92000062,93000062,37,M,SICU,2025-06-25 21:01:00,2025-06-27 03:18:00,A_minimal,high,none,standard_resourced,altered mental status,hypertension,True
+90000063,92000063,93000063,82,M,CCU,2024-05-31 20:18:00,2024-06-02 01:35:00,A_minimal,low,neurodivergent,standard_resourced,acute kidney injury,chronic kidney disease,False
+90000064,92000064,93000064,56,F,CCU,2025-02-19 19:15:00,2025-02-20 22:10:00,A_minimal,high,none,standard_resourced,altered mental status,"atrial fibrillation, chronic kidney disease",True
+90000065,92000065,93000065,64,M,MICU,2025-01-10 22:28:00,2025-01-15 12:38:00,C_complex,high,none,standard_resourced,hypotension,"prior myocardial infarction, hypertension",True
+90000066,92000066,93000066,70,M,CVICU,2025-09-03 23:10:00,2025-09-05 13:49:00,A_minimal,low,none,standard_resourced,chest pain,none,False
+90000067,92000067,93000067,63,F,CCU,2025-07-11 17:15:00,2025-07-13 17:27:00,B_moderate,medium,disability,standard_resourced,hypotension,none,False
+90000068,92000068,93000068,68,F,MICU,2024-05-28 22:53:00,2024-05-31 11:49:00,B_moderate,medium,none,standard_resourced,arrhythmia,"heart failure, hypertension",True
+90000069,92000069,93000069,24,M,CVICU,2025-07-12 18:20:00,2025-07-14 07:58:00,B_moderate,high,none,standard_resourced,hypotension,atrial fibrillation,True
+90000070,92000070,93000070,65,M,CCU,2024-10-13 23:24:00,2024-10-15 10:36:00,A_minimal,low,disability,under_resourced,post-procedural monitoring,"prior myocardial infarction, heart failure",True
+90000071,92000071,93000071,69,M,MICU,2024-06-19 14:42:00,2024-06-22 13:58:00,B_moderate,high,neurodivergent,under_resourced,altered mental status,type 2 diabetes,False
+90000072,92000072,93000072,58,F,SICU,2025-11-03 03:47:00,2025-11-04 13:20:00,B_moderate,high,none,under_resourced,hypotension,none,False
+90000073,92000073,93000073,68,F,MICU,2025-01-22 02:55:00,2025-01-23 20:57:00,A_minimal,low,none,standard_resourced,chest pain,"heart failure, atrial fibrillation, COPD",True
+90000074,92000074,93000074,65,F,MICU,2024-09-17 06:21:00,2024-09-22 20:20:00,C_complex,high,disability,standard_resourced,acute kidney injury,heart failure,True
+90000075,92000075,93000075,61,M,MICU,2024-11-11 03:17:00,2024-11-12 07:58:00,A_minimal,high,none,standard_resourced,chest pain,COPD,False

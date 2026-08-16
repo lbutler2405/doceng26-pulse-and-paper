@@ -1,0 +1,76 @@
+subject_id,hadm_id,outcome,true_onset_time,possible_window_start,possible_window_end,hospital_complexity_tier,entanglement_tier,population_context,socioeconomic_context
+90000001,92000001,0,,,,A_minimal,high,none,standard_resourced
+90000002,92000002,0,,,,B_moderate,medium,none,under_resourced
+90000003,92000003,1,2024-04-03 21:58:00,2024-04-03 21:43:00,2024-04-03 22:13:00,C_complex,low,neurodivergent,under_resourced
+90000004,92000004,0,,,,B_moderate,high,none,standard_resourced
+90000005,92000005,0,,,,C_complex,low,dementia_mild,standard_resourced
+90000006,92000006,0,,,,A_minimal,high,disability,standard_resourced
+90000007,92000007,0,,,,A_minimal,high,none,standard_resourced
+90000008,92000008,1,2024-09-11 12:41:00,2024-09-11 09:41:00,2024-09-11 15:41:00,C_complex,high,none,standard_resourced
+90000009,92000009,1,2025-09-24 17:16:00,2025-09-24 11:52:00,2025-09-24 22:40:00,B_moderate,high,dementia_moderate,standard_resourced
+90000010,92000010,0,,,,C_complex,low,neurodivergent,under_resourced
+90000011,92000011,1,2024-08-31 18:28:00,2024-08-31 15:28:00,2024-08-31 21:28:00,B_moderate,high,neurodivergent,standard_resourced
+90000012,92000012,1,2024-08-22 22:47:00,2024-08-22 21:29:00,2024-08-23 00:05:00,C_complex,medium,dementia_mild,under_resourced
+90000013,92000013,0,,,,A_minimal,medium,dementia_moderate,under_resourced
+90000014,92000014,1,2024-12-30 20:40:00,2024-12-30 17:40:00,2024-12-30 23:40:00,C_complex,high,none,standard_resourced
+90000015,92000015,0,,,,A_minimal,medium,none,standard_resourced
+90000016,92000016,1,2025-09-05 03:03:00,2025-09-05 00:03:00,2025-09-05 06:03:00,A_minimal,high,none,standard_resourced
+90000017,92000017,1,2025-05-02 22:46:00,2025-05-02 15:16:00,2025-05-03 06:16:00,C_complex,high,dementia_severe,standard_resourced
+90000018,92000018,1,2025-10-11 15:04:00,2025-10-11 12:04:00,2025-10-11 18:04:00,C_complex,high,disability,standard_resourced
+90000019,92000019,1,2024-03-18 23:27:00,2024-03-18 22:27:00,2024-03-19 00:27:00,A_minimal,medium,none,under_resourced
+90000020,92000020,0,,,,A_minimal,medium,disability,standard_resourced
+90000021,92000021,1,2025-10-07 04:05:00,2025-10-07 00:11:00,2025-10-07 07:59:00,A_minimal,high,dementia_mild,under_resourced
+90000022,92000022,1,2024-12-20 20:09:00,2024-12-20 19:09:00,2024-12-20 21:09:00,A_minimal,medium,none,under_resourced
+90000023,92000023,0,,,,A_minimal,medium,none,under_resourced
+90000024,92000024,0,,,,B_moderate,high,none,standard_resourced
+90000025,92000025,0,,,,C_complex,high,neurodivergent,standard_resourced
+90000026,92000026,0,,,,A_minimal,medium,disability,under_resourced
+90000027,92000027,0,,,,B_moderate,medium,disability,under_resourced
+90000028,92000028,0,,,,B_moderate,high,none,standard_resourced
+90000029,92000029,1,2024-03-25 02:52:00,2024-03-25 02:37:00,2024-03-25 03:07:00,A_minimal,low,neurodivergent,standard_resourced
+90000030,92000030,0,,,,B_moderate,medium,none,standard_resourced
+90000031,92000031,0,,,,A_minimal,high,none,standard_resourced
+90000032,92000032,1,2024-07-26 16:32:00,2024-07-26 16:05:00,2024-07-26 16:59:00,B_moderate,low,dementia_moderate,standard_resourced
+90000033,92000033,0,,,,A_minimal,medium,dementia_mild,under_resourced
+90000034,92000034,1,2025-03-01 09:56:00,2025-03-01 09:41:00,2025-03-01 10:11:00,A_minimal,low,none,standard_resourced
+90000035,92000035,0,,,,A_minimal,high,none,standard_resourced
+90000036,92000036,1,2025-09-12 09:50:00,2025-09-12 09:35:00,2025-09-12 10:05:00,B_moderate,low,disability,under_resourced
+90000037,92000037,1,2025-02-10 09:28:00,2025-02-10 09:13:00,2025-02-10 09:43:00,B_moderate,low,none,standard_resourced
+90000038,92000038,1,2024-10-29 04:36:00,2024-10-29 01:36:00,2024-10-29 07:36:00,B_moderate,high,none,standard_resourced
+90000039,92000039,1,2025-02-01 13:17:00,2025-02-01 13:02:00,2025-02-01 13:32:00,B_moderate,low,none,standard_resourced
+90000040,92000040,1,2025-09-15 11:17:00,2025-09-15 10:17:00,2025-09-15 12:17:00,B_moderate,medium,none,standard_resourced
+90000041,92000041,1,2024-08-22 19:23:00,2024-08-22 19:08:00,2024-08-22 19:38:00,B_moderate,low,none,standard_resourced
+90000042,92000042,1,2025-11-29 22:15:00,2025-11-29 18:21:00,2025-11-30 02:09:00,C_complex,high,dementia_mild,standard_resourced
+90000043,92000043,0,,,,C_complex,high,disability,standard_resourced
+90000044,92000044,1,2024-04-18 22:56:00,2024-04-18 22:18:00,2024-04-18 23:33:00,B_moderate,low,dementia_severe,under_resourced
+90000045,92000045,0,,,,A_minimal,medium,none,standard_resourced
+90000046,92000046,1,2025-02-17 09:16:00,2025-02-17 08:16:00,2025-02-17 10:16:00,C_complex,medium,none,standard_resourced
+90000047,92000047,1,2024-01-20 16:54:00,2024-01-20 15:54:00,2024-01-20 17:54:00,B_moderate,medium,neurodivergent,under_resourced
+90000048,92000048,0,,,,A_minimal,low,none,under_resourced
+90000049,92000049,0,,,,C_complex,medium,dementia_moderate,under_resourced
+90000050,92000050,0,,,,B_moderate,medium,none,under_resourced
+90000051,92000051,1,2025-08-31 08:36:00,2025-08-31 03:12:00,2025-08-31 14:00:00,B_moderate,high,dementia_moderate,standard_resourced
+90000052,92000052,0,,,,B_moderate,low,none,standard_resourced
+90000053,92000053,1,2024-08-29 23:47:00,2024-08-29 20:47:00,2024-08-30 02:47:00,B_moderate,high,none,standard_resourced
+90000054,92000054,1,2024-12-14 17:51:00,2024-12-14 14:51:00,2024-12-14 20:51:00,B_moderate,high,none,standard_resourced
+90000055,92000055,1,2024-07-19 06:22:00,2024-07-19 06:07:00,2024-07-19 06:37:00,A_minimal,low,none,under_resourced
+90000056,92000056,0,,,,B_moderate,low,dementia_moderate,standard_resourced
+90000057,92000057,1,2024-05-10 09:06:00,2024-05-10 08:46:00,2024-05-10 09:25:00,A_minimal,low,dementia_mild,standard_resourced
+90000058,92000058,1,2024-02-16 16:51:00,2024-02-16 14:21:00,2024-02-16 19:21:00,B_moderate,medium,dementia_severe,standard_resourced
+90000059,92000059,1,2024-01-03 05:32:00,2024-01-03 05:17:00,2024-01-03 05:47:00,A_minimal,low,none,standard_resourced
+90000060,92000060,1,2024-12-02 16:19:00,2024-12-02 16:04:00,2024-12-02 16:34:00,A_minimal,low,neurodivergent,standard_resourced
+90000061,92000061,1,2024-01-08 18:40:00,2024-01-08 18:03:00,2024-01-08 19:18:00,C_complex,low,dementia_severe,under_resourced
+90000062,92000062,0,,,,A_minimal,high,none,standard_resourced
+90000063,92000063,0,,,,A_minimal,low,neurodivergent,standard_resourced
+90000064,92000064,1,2025-02-20 02:57:00,2025-02-19 23:57:00,2025-02-20 05:57:00,A_minimal,high,none,standard_resourced
+90000065,92000065,0,,,,C_complex,high,none,standard_resourced
+90000066,92000066,1,2025-09-04 21:03:00,2025-09-04 20:48:00,2025-09-04 21:18:00,A_minimal,low,none,standard_resourced
+90000067,92000067,0,,,,B_moderate,medium,disability,standard_resourced
+90000068,92000068,1,2024-05-30 13:53:00,2024-05-30 12:53:00,2024-05-30 14:53:00,B_moderate,medium,none,standard_resourced
+90000069,92000069,0,,,,B_moderate,high,none,standard_resourced
+90000070,92000070,0,,,,A_minimal,low,disability,under_resourced
+90000071,92000071,1,2024-06-21 13:11:00,2024-06-21 10:11:00,2024-06-21 16:11:00,B_moderate,high,neurodivergent,under_resourced
+90000072,92000072,1,2025-11-03 20:28:00,2025-11-03 17:28:00,2025-11-03 23:28:00,B_moderate,high,none,under_resourced
+90000073,92000073,0,,,,A_minimal,low,none,standard_resourced
+90000074,92000074,1,2024-09-20 22:15:00,2024-09-20 19:15:00,2024-09-21 01:15:00,C_complex,high,disability,standard_resourced
+90000075,92000075,1,2024-11-11 21:15:00,2024-11-11 18:15:00,2024-11-12 00:15:00,A_minimal,high,none,standard_resourced

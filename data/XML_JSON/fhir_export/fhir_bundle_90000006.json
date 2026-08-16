@@ -1,0 +1,4559 @@
+{
+  "resourceType": "Bundle",
+  "type": "collection",
+  "meta": {
+    "tag": [
+      {
+        "system": "https://doceng26-tutorial.example",
+        "code": "synthetic"
+      }
+    ]
+  },
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Patient",
+        "id": "90000006",
+        "gender": "male",
+        "birthDate": "1949-01-01"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Encounter",
+        "id": "92000006",
+        "status": "finished",
+        "class": {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "code": "IMP",
+          "display": "inpatient encounter"
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "period": {
+          "start": "2025-08-20T14:33:00+00:00",
+          "end": "2025-08-21T12:34:00+00:00"
+        },
+        "serviceProvider": {
+          "display": "MICU"
+        },
+        "reasonCode": [
+          {
+            "text": "arrhythmia"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Condition",
+        "id": "90000006-cond-1",
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "code": {
+          "text": "arrhythmia"
+        },
+        "clinicalStatus": {
+          "text": "active"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-0-heartrate",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-20T15:33:00+00:00",
+        "valueQuantity": {
+          "value": 68.9,
+          "unit": "beats/minute",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-0-resprate",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "9279-1",
+              "display": "Respiratory rate"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-20T15:33:00+00:00",
+        "valueQuantity": {
+          "value": 17.5,
+          "unit": "breaths/minute",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-0-o2sat",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "59408-5",
+              "display": "Oxygen saturation by pulse oximetry"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-20T15:33:00+00:00",
+        "valueQuantity": {
+          "value": 98.8,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-0-sbp",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8480-6",
+              "display": "Systolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-20T15:33:00+00:00",
+        "valueQuantity": {
+          "value": 108.4,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-0-dbp",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8462-4",
+              "display": "Diastolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-20T15:33:00+00:00",
+        "valueQuantity": {
+          "value": 73.1,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-2-heartrate",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-20T17:33:00+00:00",
+        "valueQuantity": {
+          "value": 68.9,
+          "unit": "beats/minute",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-2-resprate",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "9279-1",
+              "display": "Respiratory rate"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-20T17:33:00+00:00",
+        "valueQuantity": {
+          "value": 18.6,
+          "unit": "breaths/minute",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-2-o2sat",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "59408-5",
+              "display": "Oxygen saturation by pulse oximetry"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-20T17:33:00+00:00",
+        "valueQuantity": {
+          "value": 97.4,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-2-sbp",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8480-6",
+              "display": "Systolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-20T17:33:00+00:00",
+        "valueQuantity": {
+          "value": 118.3,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-2-dbp",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8462-4",
+              "display": "Diastolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-20T17:33:00+00:00",
+        "valueQuantity": {
+          "value": 79.3,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-3-heartrate",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-20T18:33:00+00:00",
+        "valueQuantity": {
+          "value": 75.3,
+          "unit": "beats/minute",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-3-resprate",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "9279-1",
+              "display": "Respiratory rate"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-20T18:33:00+00:00",
+        "valueQuantity": {
+          "value": 20.5,
+          "unit": "breaths/minute",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-3-o2sat",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "59408-5",
+              "display": "Oxygen saturation by pulse oximetry"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-20T18:33:00+00:00",
+        "valueQuantity": {
+          "value": 96.5,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-3-sbp",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8480-6",
+              "display": "Systolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-20T18:33:00+00:00",
+        "valueQuantity": {
+          "value": 99.6,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-3-dbp",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8462-4",
+              "display": "Diastolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-20T18:33:00+00:00",
+        "valueQuantity": {
+          "value": 51.1,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-4-heartrate",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-20T19:33:00+00:00",
+        "valueQuantity": {
+          "value": 72.2,
+          "unit": "beats/minute",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-4-resprate",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "9279-1",
+              "display": "Respiratory rate"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-20T19:33:00+00:00",
+        "valueQuantity": {
+          "value": 19.2,
+          "unit": "breaths/minute",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-4-o2sat",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "59408-5",
+              "display": "Oxygen saturation by pulse oximetry"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-20T19:33:00+00:00",
+        "valueQuantity": {
+          "value": 95.2,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-4-sbp",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8480-6",
+              "display": "Systolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-20T19:33:00+00:00",
+        "valueQuantity": {
+          "value": 106.4,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-4-dbp",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8462-4",
+              "display": "Diastolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-20T19:33:00+00:00",
+        "valueQuantity": {
+          "value": 76.8,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-5-heartrate",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-20T20:33:00+00:00",
+        "valueQuantity": {
+          "value": 79.6,
+          "unit": "beats/minute",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-5-resprate",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "9279-1",
+              "display": "Respiratory rate"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-20T20:33:00+00:00",
+        "valueQuantity": {
+          "value": 16.8,
+          "unit": "breaths/minute",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-5-o2sat",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "59408-5",
+              "display": "Oxygen saturation by pulse oximetry"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-20T20:33:00+00:00",
+        "valueQuantity": {
+          "value": 97.5,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-5-sbp",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8480-6",
+              "display": "Systolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-20T20:33:00+00:00",
+        "valueQuantity": {
+          "value": 118.8,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-5-dbp",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8462-4",
+              "display": "Diastolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-20T20:33:00+00:00",
+        "valueQuantity": {
+          "value": 80.1,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-6-heartrate",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-20T21:33:00+00:00",
+        "valueQuantity": {
+          "value": 72.2,
+          "unit": "beats/minute",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-6-resprate",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "9279-1",
+              "display": "Respiratory rate"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-20T21:33:00+00:00",
+        "valueQuantity": {
+          "value": 17.0,
+          "unit": "breaths/minute",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-6-o2sat",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "59408-5",
+              "display": "Oxygen saturation by pulse oximetry"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-20T21:33:00+00:00",
+        "valueQuantity": {
+          "value": 98.3,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-6-sbp",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8480-6",
+              "display": "Systolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-20T21:33:00+00:00",
+        "valueQuantity": {
+          "value": 102.6,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-6-dbp",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8462-4",
+              "display": "Diastolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-20T21:33:00+00:00",
+        "valueQuantity": {
+          "value": 72.2,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-7-heartrate",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-20T22:33:00+00:00",
+        "valueQuantity": {
+          "value": 76.5,
+          "unit": "beats/minute",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-7-resprate",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "9279-1",
+              "display": "Respiratory rate"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-20T22:33:00+00:00",
+        "valueQuantity": {
+          "value": 15.7,
+          "unit": "breaths/minute",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-7-o2sat",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "59408-5",
+              "display": "Oxygen saturation by pulse oximetry"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-20T22:33:00+00:00",
+        "valueQuantity": {
+          "value": 95.3,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-7-sbp",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8480-6",
+              "display": "Systolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-20T22:33:00+00:00",
+        "valueQuantity": {
+          "value": 118.1,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-7-dbp",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8462-4",
+              "display": "Diastolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-20T22:33:00+00:00",
+        "valueQuantity": {
+          "value": 80.2,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-8-heartrate",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-20T23:33:00+00:00",
+        "valueQuantity": {
+          "value": 79.3,
+          "unit": "beats/minute",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-8-resprate",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "9279-1",
+              "display": "Respiratory rate"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-20T23:33:00+00:00",
+        "valueQuantity": {
+          "value": 20.9,
+          "unit": "breaths/minute",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-8-o2sat",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "59408-5",
+              "display": "Oxygen saturation by pulse oximetry"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-20T23:33:00+00:00",
+        "valueQuantity": {
+          "value": 98.2,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-8-sbp",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8480-6",
+              "display": "Systolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-20T23:33:00+00:00",
+        "valueQuantity": {
+          "value": 108.7,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-8-dbp",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8462-4",
+              "display": "Diastolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-20T23:33:00+00:00",
+        "valueQuantity": {
+          "value": 66.9,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-9-heartrate",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-21T00:33:00+00:00",
+        "valueQuantity": {
+          "value": 78.6,
+          "unit": "beats/minute",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-9-resprate",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "9279-1",
+              "display": "Respiratory rate"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-21T00:33:00+00:00",
+        "valueQuantity": {
+          "value": 18.4,
+          "unit": "breaths/minute",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-9-o2sat",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "59408-5",
+              "display": "Oxygen saturation by pulse oximetry"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-21T00:33:00+00:00",
+        "valueQuantity": {
+          "value": 97.3,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-9-sbp",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8480-6",
+              "display": "Systolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-21T00:33:00+00:00",
+        "valueQuantity": {
+          "value": 102.0,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-9-dbp",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8462-4",
+              "display": "Diastolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-21T00:33:00+00:00",
+        "valueQuantity": {
+          "value": 76.4,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-10-heartrate",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-21T01:33:00+00:00",
+        "valueQuantity": {
+          "value": 78.3,
+          "unit": "beats/minute",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-10-resprate",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "9279-1",
+              "display": "Respiratory rate"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-21T01:33:00+00:00",
+        "valueQuantity": {
+          "value": 18.5,
+          "unit": "breaths/minute",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-10-o2sat",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "59408-5",
+              "display": "Oxygen saturation by pulse oximetry"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-21T01:33:00+00:00",
+        "valueQuantity": {
+          "value": 99.5,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-10-sbp",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8480-6",
+              "display": "Systolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-21T01:33:00+00:00",
+        "valueQuantity": {
+          "value": 106.6,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-10-dbp",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8462-4",
+              "display": "Diastolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-21T01:33:00+00:00",
+        "valueQuantity": {
+          "value": 82.4,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-11-heartrate",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-21T02:33:00+00:00",
+        "valueQuantity": {
+          "value": 83.8,
+          "unit": "beats/minute",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-11-resprate",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "9279-1",
+              "display": "Respiratory rate"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-21T02:33:00+00:00",
+        "valueQuantity": {
+          "value": 21.3,
+          "unit": "breaths/minute",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-11-o2sat",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "59408-5",
+              "display": "Oxygen saturation by pulse oximetry"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-21T02:33:00+00:00",
+        "valueQuantity": {
+          "value": 97.2,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-11-sbp",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8480-6",
+              "display": "Systolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-21T02:33:00+00:00",
+        "valueQuantity": {
+          "value": 129.5,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-11-dbp",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8462-4",
+              "display": "Diastolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-21T02:33:00+00:00",
+        "valueQuantity": {
+          "value": 76.7,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-12-heartrate",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-21T03:33:00+00:00",
+        "valueQuantity": {
+          "value": 74.9,
+          "unit": "beats/minute",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-12-resprate",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "9279-1",
+              "display": "Respiratory rate"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-21T03:33:00+00:00",
+        "valueQuantity": {
+          "value": 21.0,
+          "unit": "breaths/minute",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-12-o2sat",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "59408-5",
+              "display": "Oxygen saturation by pulse oximetry"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-21T03:33:00+00:00",
+        "valueQuantity": {
+          "value": 98.6,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-12-sbp",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8480-6",
+              "display": "Systolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-21T03:33:00+00:00",
+        "valueQuantity": {
+          "value": 102.3,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-12-dbp",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8462-4",
+              "display": "Diastolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-21T03:33:00+00:00",
+        "valueQuantity": {
+          "value": 72.5,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-13-heartrate",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-21T04:33:00+00:00",
+        "valueQuantity": {
+          "value": 74.1,
+          "unit": "beats/minute",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-13-resprate",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "9279-1",
+              "display": "Respiratory rate"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-21T04:33:00+00:00",
+        "valueQuantity": {
+          "value": 24.1,
+          "unit": "breaths/minute",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-13-o2sat",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "59408-5",
+              "display": "Oxygen saturation by pulse oximetry"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-21T04:33:00+00:00",
+        "valueQuantity": {
+          "value": 97.8,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-13-sbp",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8480-6",
+              "display": "Systolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-21T04:33:00+00:00",
+        "valueQuantity": {
+          "value": 112.2,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-13-dbp",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8462-4",
+              "display": "Diastolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-21T04:33:00+00:00",
+        "valueQuantity": {
+          "value": 81.8,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-14-heartrate",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-21T05:33:00+00:00",
+        "valueQuantity": {
+          "value": 83.1,
+          "unit": "beats/minute",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-14-resprate",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "9279-1",
+              "display": "Respiratory rate"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-21T05:33:00+00:00",
+        "valueQuantity": {
+          "value": 14.0,
+          "unit": "breaths/minute",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-14-o2sat",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "59408-5",
+              "display": "Oxygen saturation by pulse oximetry"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-21T05:33:00+00:00",
+        "valueQuantity": {
+          "value": 97.0,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-14-sbp",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8480-6",
+              "display": "Systolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-21T05:33:00+00:00",
+        "valueQuantity": {
+          "value": 123.3,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-14-dbp",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8462-4",
+              "display": "Diastolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-21T05:33:00+00:00",
+        "valueQuantity": {
+          "value": 84.5,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-15-heartrate",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-21T06:33:00+00:00",
+        "valueQuantity": {
+          "value": 71.8,
+          "unit": "beats/minute",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-15-resprate",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "9279-1",
+              "display": "Respiratory rate"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-21T06:33:00+00:00",
+        "valueQuantity": {
+          "value": 19.6,
+          "unit": "breaths/minute",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-15-o2sat",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "59408-5",
+              "display": "Oxygen saturation by pulse oximetry"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-21T06:33:00+00:00",
+        "valueQuantity": {
+          "value": 96.8,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-15-sbp",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8480-6",
+              "display": "Systolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-21T06:33:00+00:00",
+        "valueQuantity": {
+          "value": 110.2,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-15-dbp",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8462-4",
+              "display": "Diastolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-21T06:33:00+00:00",
+        "valueQuantity": {
+          "value": 79.6,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-16-heartrate",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-21T07:33:00+00:00",
+        "valueQuantity": {
+          "value": 65.3,
+          "unit": "beats/minute",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-16-resprate",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "9279-1",
+              "display": "Respiratory rate"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-21T07:33:00+00:00",
+        "valueQuantity": {
+          "value": 14.9,
+          "unit": "breaths/minute",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-16-o2sat",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "59408-5",
+              "display": "Oxygen saturation by pulse oximetry"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-21T07:33:00+00:00",
+        "valueQuantity": {
+          "value": 97.5,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-16-sbp",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8480-6",
+              "display": "Systolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-21T07:33:00+00:00",
+        "valueQuantity": {
+          "value": 94.2,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-16-dbp",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8462-4",
+              "display": "Diastolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-21T07:33:00+00:00",
+        "valueQuantity": {
+          "value": 71.4,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-17-heartrate",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-21T08:33:00+00:00",
+        "valueQuantity": {
+          "value": 86.9,
+          "unit": "beats/minute",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-17-resprate",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "9279-1",
+              "display": "Respiratory rate"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-21T08:33:00+00:00",
+        "valueQuantity": {
+          "value": 23.6,
+          "unit": "breaths/minute",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-17-o2sat",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "59408-5",
+              "display": "Oxygen saturation by pulse oximetry"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-21T08:33:00+00:00",
+        "valueQuantity": {
+          "value": 96.2,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-17-sbp",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8480-6",
+              "display": "Systolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-21T08:33:00+00:00",
+        "valueQuantity": {
+          "value": 115.4,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-17-dbp",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8462-4",
+              "display": "Diastolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-21T08:33:00+00:00",
+        "valueQuantity": {
+          "value": 66.7,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-18-heartrate",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-21T09:33:00+00:00",
+        "valueQuantity": {
+          "value": 87.9,
+          "unit": "beats/minute",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-18-resprate",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "9279-1",
+              "display": "Respiratory rate"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-21T09:33:00+00:00",
+        "valueQuantity": {
+          "value": 17.0,
+          "unit": "breaths/minute",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-18-o2sat",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "59408-5",
+              "display": "Oxygen saturation by pulse oximetry"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-21T09:33:00+00:00",
+        "valueQuantity": {
+          "value": 97.2,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-18-sbp",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8480-6",
+              "display": "Systolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-21T09:33:00+00:00",
+        "valueQuantity": {
+          "value": 103.4,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-18-dbp",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8462-4",
+              "display": "Diastolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-21T09:33:00+00:00",
+        "valueQuantity": {
+          "value": 81.5,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-19-heartrate",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-21T10:33:00+00:00",
+        "valueQuantity": {
+          "value": 74.4,
+          "unit": "beats/minute",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-19-resprate",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "9279-1",
+              "display": "Respiratory rate"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-21T10:33:00+00:00",
+        "valueQuantity": {
+          "value": 18.1,
+          "unit": "breaths/minute",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-19-o2sat",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "59408-5",
+              "display": "Oxygen saturation by pulse oximetry"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-21T10:33:00+00:00",
+        "valueQuantity": {
+          "value": 96.7,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-19-sbp",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8480-6",
+              "display": "Systolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-21T10:33:00+00:00",
+        "valueQuantity": {
+          "value": 121.5,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-19-dbp",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8462-4",
+              "display": "Diastolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-21T10:33:00+00:00",
+        "valueQuantity": {
+          "value": 81.9,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-20-heartrate",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-21T11:33:00+00:00",
+        "valueQuantity": {
+          "value": 89.7,
+          "unit": "beats/minute",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-20-resprate",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "9279-1",
+              "display": "Respiratory rate"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-21T11:33:00+00:00",
+        "valueQuantity": {
+          "value": 14.6,
+          "unit": "breaths/minute",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-20-o2sat",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "59408-5",
+              "display": "Oxygen saturation by pulse oximetry"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-21T11:33:00+00:00",
+        "valueQuantity": {
+          "value": 99.1,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-20-sbp",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8480-6",
+              "display": "Systolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-21T11:33:00+00:00",
+        "valueQuantity": {
+          "value": 114.4,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-20-dbp",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8462-4",
+              "display": "Diastolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-21T11:33:00+00:00",
+        "valueQuantity": {
+          "value": 69.9,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-21-heartrate",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8867-4",
+              "display": "Heart rate"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-21T12:33:00+00:00",
+        "valueQuantity": {
+          "value": 76.9,
+          "unit": "beats/minute",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-21-resprate",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "9279-1",
+              "display": "Respiratory rate"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-21T12:33:00+00:00",
+        "valueQuantity": {
+          "value": 18.7,
+          "unit": "breaths/minute",
+          "system": "http://unitsofmeasure.org",
+          "code": "/min"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-21-o2sat",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "59408-5",
+              "display": "Oxygen saturation by pulse oximetry"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-21T12:33:00+00:00",
+        "valueQuantity": {
+          "value": 96.4,
+          "unit": "%",
+          "system": "http://unitsofmeasure.org",
+          "code": "%"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-21-sbp",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8480-6",
+              "display": "Systolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-21T12:33:00+00:00",
+        "valueQuantity": {
+          "value": 110.5,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-vit-21-dbp",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "vital-signs"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "8462-4",
+              "display": "Diastolic blood pressure"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-21T12:33:00+00:00",
+        "valueQuantity": {
+          "value": 68.1,
+          "unit": "mmHg",
+          "system": "http://unitsofmeasure.org",
+          "code": "mm[Hg]"
+        }
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-lab-1",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2823-3",
+              "display": "Potassium [Moles/volume] in Serum or Plasma"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-21T04:58:00+00:00",
+        "issued": "2025-08-21T08:00:00+00:00",
+        "valueQuantity": {
+          "value": 4.32,
+          "unit": "mEq/L",
+          "system": "http://unitsofmeasure.org",
+          "code": "mEq/L"
+        },
+        "interpretation": [
+          {
+            "text": "normal"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-lab-2",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "2160-0",
+              "display": "Creatinine [Mass/volume] in Serum or Plasma"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-21T04:58:00+00:00",
+        "issued": "2025-08-21T08:00:00+00:00",
+        "valueQuantity": {
+          "value": 1.07,
+          "unit": "mg/dL",
+          "system": "http://unitsofmeasure.org",
+          "code": "mg/dL"
+        },
+        "interpretation": [
+          {
+            "text": "normal"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-lab-3",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "10839-9",
+              "display": "Troponin I.cardiac [Mass/volume] in Serum or Plasma"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-21T04:58:00+00:00",
+        "issued": "2025-08-21T08:00:00+00:00",
+        "valueQuantity": {
+          "value": 0.01,
+          "unit": "ng/mL",
+          "system": "http://unitsofmeasure.org",
+          "code": "ng/mL"
+        },
+        "interpretation": [
+          {
+            "text": "normal"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Observation",
+        "id": "90000006-lab-4",
+        "status": "final",
+        "category": [
+          {
+            "coding": [
+              {
+                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                "code": "laboratory"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "6690-2",
+              "display": "Leukocytes [#/volume] in Blood"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "encounter": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-21T04:58:00+00:00",
+        "issued": "2025-08-21T08:00:00+00:00",
+        "valueQuantity": {
+          "value": 7.05,
+          "unit": "K/uL",
+          "system": "http://unitsofmeasure.org",
+          "code": "K/uL"
+        },
+        "interpretation": [
+          {
+            "text": "normal"
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "90000006-N20",
+        "status": "current",
+        "type": {
+          "text": "admission"
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "context": {
+          "encounter": [
+            {
+              "reference": "Encounter/92000006"
+            }
+          ],
+          "period": {
+            "start": "2025-08-20T14:33:00+00:00"
+          }
+        },
+        "date": "2025-08-20T22:07:00+00:00",
+        "author": [
+          {
+            "type": "clinician"
+          }
+        ],
+        "content": [
+          {
+            "attachment": {
+              "contentType": "text/plain",
+              "data": "UGF0aWVudCBhZG1pdHRlZCBmb3IgYXJyaHl0aG1pYS4gQmFzZWxpbmUgdml0YWxzIHJldmlld2VkLiBQbGFuOiBtb25pdG9yIGFuZCB0cmVhdCBwZXIgcHJvdG9jb2wu"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "90000006-N90002",
+        "status": "current",
+        "type": {
+          "text": "ecg_interpretation"
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "context": {
+          "encounter": [
+            {
+              "reference": "Encounter/92000006"
+            }
+          ],
+          "period": {
+            "start": "2025-08-20T18:03:00+00:00"
+          }
+        },
+        "date": "2025-08-21T22:24:00+00:00",
+        "author": [
+          {
+            "type": "clinician"
+          }
+        ],
+        "content": [
+          {
+            "attachment": {
+              "contentType": "text/plain",
+              "data": "UmV2aWV3ZWQgdG9kYXkncyBFQ0csIHNpbnVzIHJoeXRobSwgb3RoZXJ3aXNlIG5vcm1hbCBlY2cgbm90ZWQuIFdpbGwgdHJlbmQgd2l0aCBzZXJpYWwgdHJhY2luZ3Mu"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "90000006-N90050",
+        "status": "current",
+        "type": {
+          "text": "echo_interpretation"
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "context": {
+          "encounter": [
+            {
+              "reference": "Encounter/92000006"
+            }
+          ],
+          "period": {
+            "start": "2025-08-20T18:53:00+00:00"
+          }
+        },
+        "date": "2025-08-21T08:39:00+00:00",
+        "author": [
+          {
+            "type": "clinician"
+          }
+        ],
+        "content": [
+          {
+            "attachment": {
+              "contentType": "text/plain",
+              "data": "UmV2aWV3ZWQgZWNob2NhcmRpb2dyYW0sIHByZXNlcnZlZCBsdmVmLCBubyBzaWduaWZpY2FudCB2YWx2dWxhciBkaXNlYXNlLiBMVkVGIDYwJS4gQ2FyZGlvbG9neSBhd2FyZS4="
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "90000006-N21",
+        "status": "current",
+        "type": {
+          "text": "routine_stable"
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "context": {
+          "encounter": [
+            {
+              "reference": "Encounter/92000006"
+            }
+          ],
+          "period": {
+            "start": "2025-08-20T19:45:00+00:00"
+          }
+        },
+        "date": "2025-08-21T09:02:00+00:00",
+        "author": [
+          {
+            "type": "clinician"
+          }
+        ],
+        "content": [
+          {
+            "attachment": {
+              "contentType": "text/plain",
+              "data": "Tm8gYWN1dGUgY2hhbmdlcyBvdmVybmlnaHQuIFBhdGllbnQgc3RhYmxlLCB0b2xlcmF0aW5nIGN1cnJlbnQgcGxhbiBvZiBjYXJlLg=="
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "90000006-N22",
+        "status": "current",
+        "type": {
+          "text": "discharge"
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "context": {
+          "encounter": [
+            {
+              "reference": "Encounter/92000006"
+            }
+          ],
+          "period": {
+            "start": "2025-08-21T12:34:00+00:00"
+          }
+        },
+        "date": "2025-08-22T09:47:00+00:00",
+        "author": [
+          {
+            "type": "clinician"
+          }
+        ],
+        "content": [
+          {
+            "attachment": {
+              "contentType": "text/plain",
+              "data": "UGF0aWVudCdzIGNvbmRpdGlvbiBpbXByb3ZlZCAvIHN0YWJpbGl6ZWQgb3ZlciB0aGUgYWRtaXNzaW9uLiBEaXNjaGFyZ2VkIHdpdGggZm9sbG93LXVwIHBsYW4gaW4gcGxhY2UuIFJldHVybiBwcmVjYXV0aW9ucyByZXZpZXdlZCB3aXRoIHBhdGllbnQuIE5vIGFjdXRlIGlzc3VlcyBhdCB0aW1lIG9mIGRpc2NoYXJnZS4gRGlzY2hhcmdlIG1lZGljYXRpb25zIGluY2x1ZGUgaW5zdWxpbiBnbGFyZ2luZSAxMCB1bml0cyBzdWJjdXRhbmVvdXMgbmlnaHRseSBmb3IgZ2x5Y2VtaWMgY29udHJvbC4gV291bmQgY2FyZSBpbnN0cnVjdGlvbnMgcHJvdmlkZWQsIGlmIGFwcGxpY2FibGUu"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "id": "med-1_006N22",
+        "status": "active",
+        "medicationCodeableConcept": {
+          "text": "insulin glargine"
+        },
+        "subject": {
+          "reference": "Patient/90000006"
+        },
+        "context": {
+          "reference": "Encounter/92000006"
+        },
+        "effectiveDateTime": "2025-08-22T09:47:00+00:00",
+        "dosage": [
+          {
+            "text": "10 units subcutaneous nightly"
+          }
+        ],
+        "reasonCode": [
+          {
+            "text": "glycemic control"
+          }
+        ],
+        "derivedFrom": [
+          {
+            "reference": "DocumentReference/90000006-N22"
+          }
+        ]
+      }
+    }
+  ]
+}

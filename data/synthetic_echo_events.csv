@@ -1,0 +1,21 @@
+echo_id,subject_id,hadm_id,echo_time,report_time,lvef_percent,wall_motion_abnormality,valve_regurgitation,pericardial_effusion,finding
+90000006-ECHO1,90000006,92000006,2025-08-20 18:53:00,2025-08-20 21:27:00,60.0,N,none,N,"Preserved LVEF, no significant valvular disease."
+90000007-ECHO2,90000007,92000007,2024-01-17 16:26:00,2024-01-18 00:54:00,33.0,Y,moderate,N,"Moderate mitral regurgitation, preserved LVEF."
+90000012-ECHO3,90000012,92000012,2024-08-21 03:26:00,2024-08-21 06:35:00,61.0,N,mild,N,Normal biventricular size and systolic function.
+90000014-ECHO4,90000014,92000014,2024-12-27 03:24:00,2024-12-27 05:14:00,67.0,N,trace,N,"Preserved LVEF, no significant valvular disease."
+90000015-ECHO5,90000015,92000015,2025-04-09 01:47:00,2025-04-09 03:21:00,40.0,Y,trace,Y,Reduced LVEF with global hypokinesis.
+90000016-ECHO6,90000016,92000016,2025-09-05 01:02:00,2025-09-05 07:12:00,65.0,N,trace,N,Normal biventricular size and systolic function.
+90000018-ECHO7,90000018,92000018,2025-10-09 18:48:00,2025-10-09 20:26:00,60.0,N,none,N,Normal biventricular size and systolic function.
+90000019-ECHO8,90000019,92000019,2024-03-18 09:43:00,2024-03-18 10:51:00,34.0,Y,mild,N,"Moderate mitral regurgitation, preserved LVEF."
+90000021-ECHO9,90000021,92000021,2025-10-06 23:32:00,2025-10-07 04:51:00,62.0,N,severe,N,Normal biventricular size and systolic function.
+90000022-ECHO10,90000022,92000022,2024-12-20 01:59:00,2024-12-20 04:36:00,63.0,N,none,Y,Normal biventricular size and systolic function.
+90000024-ECHO11,90000024,92000024,2025-01-11 00:37:00,2025-01-11 01:47:00,62.0,N,mild,N,"Preserved LVEF, no significant valvular disease."
+90000027-ECHO12,90000027,92000027,2025-05-23 15:39:00,2025-05-23 17:05:00,26.0,Y,none,N,Reduced LVEF with global hypokinesis.
+90000031-ECHO13,90000031,92000031,2025-05-19 01:45:00,2025-05-19 06:16:00,57.0,N,moderate,N,"Preserved LVEF, no significant valvular disease."
+90000043-ECHO14,90000043,92000043,2025-08-09 10:17:00,2025-08-09 14:21:00,66.0,N,none,N,Normal biventricular size and systolic function.
+90000048-ECHO15,90000048,92000048,2025-09-25 16:38:00,2025-09-25 20:08:00,37.0,Y,none,Y,"Moderate mitral regurgitation, preserved LVEF."
+90000060-ECHO16,90000060,92000060,2024-12-02 17:38:00,2024-12-02 18:49:00,28.0,Y,none,N,Reduced LVEF with global hypokinesis.
+90000061-ECHO17,90000061,92000061,2024-01-09 14:19:00,2024-01-09 17:04:00,37.0,Y,mild,N,Reduced LVEF with global hypokinesis.
+90000062-ECHO18,90000062,92000062,2025-06-26 02:08:00,2025-06-26 06:05:00,28.0,Y,moderate,N,Reduced LVEF with global hypokinesis.
+90000069-ECHO19,90000069,92000069,2025-07-13 10:52:00,2025-07-13 12:55:00,60.0,N,moderate,N,"Preserved LVEF, no significant valvular disease."
+90000073-ECHO20,90000073,92000073,2025-01-22 10:52:00,2025-01-22 15:04:00,35.0,Y,moderate,Y,Mild-moderate regional left ventricular systolic dysfunction.

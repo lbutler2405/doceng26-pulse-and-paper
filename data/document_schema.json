@@ -1,0 +1,186 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://doceng26-tutorial.example/temporally-entangled-document.schema.json",
+  "title": "TemporallyEntangledDocument",
+  "description": "A single hospital admission represented as one self-contained document object, not a set of relational rows. Every evidence item carries its own provenance (source table, author, event time vs record time) so the document is auditable on its own terms, per the DocEng community's core concerns of structure, representation, and auditability.",
+  "type": "object",
+  "required": ["schema_version", "hadm_id", "subject_id", "admission", "complexity_context", "evidence_streams"],
+
+  "$defs": {
+    "Provenance": {
+      "type": "object",
+      "description": "Where this stream's data actually came from, before it was unified into this document. Mirrors the real-world FHIR Provenance resource concept: provenance is first-class information, not a comment.",
+      "required": ["format", "source_system"],
+      "properties": {
+        "format": {
+          "type": "string",
+          "description": "e.g. 'HL7 FHIR R4 Bundle', 'MUSE XML (GE Healthcare RestingECG)', 'Tutorial CSV export'"
+        },
+        "source_system": { "type": "string", "description": "e.g. 'EHR export', 'Cardiology ECG acquisition system'" },
+        "raw_source_file": {
+          "type": ["string", "null"],
+          "description": "path to the actual raw file this was parsed from, when one exists; null when this stream was built directly from the tutorial's CSVs"
+        }
+      }
+    }
+  },
+
+  "properties": {
+    "schema_version": { "type": "string" },
+    "generated_by": { "type": "string" },
+    "hadm_id": { "type": "integer" },
+    "subject_id": { "type": "integer" },
+
+    "admission": {
+      "type": "object",
+      "required": ["admittime", "dischtime", "careunit", "admit_reason"],
+      "properties": {
+        "admittime": { "type": "string", "format": "date-time" },
+        "dischtime": { "type": "string", "format": "date-time" },
+        "age": { "type": "integer" },
+        "gender": { "type": "string" },
+        "careunit": { "type": "string" },
+        "admit_reason": { "type": "string" },
+        "comorbidities": { "type": "array", "items": { "type": "string" } },
+        "has_cardiac_history": { "type": "boolean" }
+      }
+    },
+
+    "complexity_context": {
+      "type": "object",
+      "description": "The four design axes. Not clinical facts, engineering metadata about how this document was generated.",
+      "required": ["hospital_complexity_tier", "entanglement_tier", "population_context", "socioeconomic_context"],
+      "properties": {
+        "hospital_complexity_tier": { "enum": ["A_minimal", "B_moderate", "C_complex"] },
+        "entanglement_tier": { "enum": ["low", "medium", "high"] },
+        "population_context": {
+          "enum": ["none", "neurodivergent", "disability", "dementia_mild", "dementia_moderate", "dementia_severe"]
+        },
+        "socioeconomic_context": { "enum": ["standard_resourced", "under_resourced"] }
+      }
+    },
+
+    "evidence_streams": {
+      "type": "object",
+      "required": ["continuous_signal", "intermittent_measurements", "delayed_narrative"],
+      "properties": {
+
+        "continuous_signal": {
+          "type": "object",
+          "properties": {
+            "provenance": { "$ref": "#/$defs/Provenance" },
+            "n_readings": { "type": "integer" },
+            "readings": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": ["charttime"],
+                "properties": {
+                  "charttime": { "type": "string", "format": "date-time" },
+                  "heartrate": { "type": ["number", "null"] },
+                  "resprate": { "type": ["number", "null"] },
+                  "o2sat": { "type": ["number", "null"] },
+                  "sbp": { "type": ["number", "null"] },
+                  "dbp": { "type": ["number", "null"] },
+                  "signal_quality": { "enum": ["normal", "degraded"] }
+                }
+              }
+            }
+          }
+        },
+
+        "intermittent_measurements": {
+          "type": "object",
+          "properties": {
+            "provenance": { "$ref": "#/$defs/Provenance" },
+            "n_draws": { "type": "integer" },
+            "draws": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": ["specimen_id", "charttime", "storetime", "label"],
+                "properties": {
+                  "specimen_id": { "type": ["integer", "null"] },
+                  "charttime": { "type": "string", "format": "date-time", "description": "when drawn" },
+                  "storetime": { "type": "string", "format": "date-time", "description": "when resulted" },
+                  "label": { "type": "string" },
+                  "value": { "type": ["number", "null"] },
+                  "valueuom": { "type": ["string", "null"] },
+                  "flag": { "type": ["string", "null"] }
+                }
+              }
+            }
+          }
+        },
+
+        "delayed_narrative": {
+          "type": "object",
+          "description": "Clinician, caregiver, and diagnostic-interpretation notes, unified. Each note's event_charttime vs storetime pair is the raw material for documentation-lag analysis, deliberately left uncomputed here.",
+          "properties": {
+            "provenance": { "$ref": "#/$defs/Provenance" },
+            "notes": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "required": ["note_id", "note_type", "author_type", "event_charttime", "storetime", "text"],
+                "properties": {
+                  "note_id": { "type": "string" },
+                  "note_type": { "type": "string" },
+                  "author_type": { "enum": ["clinician", "caregiver"] },
+                  "event_charttime": { "type": "string", "format": "date-time" },
+                  "storetime": { "type": "string", "format": "date-time" },
+                  "text": { "type": "string" },
+                  "history_reliability": { "type": ["string", "null"] },
+                  "related_event_id": {
+                    "type": ["string", "null"],
+                    "description": "links back to an ecg_id/echo_id in diagnostic_studies when this note is an interpretation of one"
+                  },
+                  "is_amendment": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "true if this note is a correction to an earlier note, not a new clinical event. A document-versioning fact, not a timing fact: see amends_note_id."
+                  },
+                  "amends_note_id": {
+                    "type": ["string", "null"],
+                    "description": "note_id of the entry this amendment corrects. Required whenever is_amendment is true, an amendment that doesn't say what it's amending is an orphaned correction, not a document."
+                  },
+                  "amendment_reason": { "type": ["string", "null"] },
+                  "medication_mentions": {
+                    "type": "array",
+                    "description": "character-span annotations, same 4-field schema as the real medication-labels-mimic-note dataset",
+                    "items": {
+                      "type": "object",
+                      "required": ["start_position", "end_position", "annotation", "group", "text"],
+                      "properties": {
+                        "start_position": { "type": "integer" },
+                        "end_position": { "type": "integer" },
+                        "annotation": { "enum": ["MEDICATION", "DOSAGE", "MODE", "FREQUENCY", "REASON"] },
+                        "group": { "type": "string" },
+                        "text": { "type": "string", "description": "the exact substring, provided for convenience; recoverable via note.text[start_position:end_position]" }
+                      }
+                    }
+                  }
+                },
+                "allOf": [
+                  {
+                    "if": { "properties": { "is_amendment": { "const": true } } },
+                    "then": { "required": ["amends_note_id", "amendment_reason"] }
+                  }
+                ]
+              }
+            }
+          }
+        },
+
+        "diagnostic_studies": {
+          "type": "object",
+          "description": "Structured ECG/echo characteristics, not raw waveform or video. Each study's own interpretation note (if any) is cross-referenced by id, not duplicated. Each individual study carries its own provenance, since within one patient some studies may be parsed from a real MUSE XML file and others built from the tutorial's CSV, exactly as a real ingestion pipeline would see a mix of sources.",
+          "properties": {
+            "ecg": { "type": "array", "items": { "type": "object" } },
+            "echo": { "type": "array", "items": { "type": "object" } }
+          }
+        }
+      }
+    }
+  }
+}

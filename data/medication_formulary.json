@@ -1,0 +1,100 @@
+{
+  "resourceType": "MedicationFormulary",
+  "description": "Simplified, FHIR-inspired medication reference for this tutorial's synthetic corpus. Real EHR systems solve the brand/generic naming problem with RxNorm-coded FHIR Medication resources; this file mirrors that structure at a scale appropriate for a three-hour tutorial.",
+  "medications": [
+    {
+      "formulary_id": "MED-001",
+      "generic_name": "metoprolol",
+      "known_synonyms": [],
+      "typical_dose": "25mg",
+      "typical_mode": "PO",
+      "typical_frequency": "BID",
+      "common_indications": [
+        "rate control",
+        "hypertension"
+      ]
+    },
+    {
+      "formulary_id": "MED-002",
+      "generic_name": "furosemide",
+      "known_synonyms": [],
+      "typical_dose": "40mg",
+      "typical_mode": "IV",
+      "typical_frequency": "daily",
+      "common_indications": [
+        "volume overload",
+        "heart failure"
+      ]
+    },
+    {
+      "formulary_id": "MED-003",
+      "generic_name": "heparin",
+      "known_synonyms": [],
+      "typical_dose": "5000 units",
+      "typical_mode": "subcutaneous",
+      "typical_frequency": "every 8 hours",
+      "common_indications": [
+        "DVT prophylaxis"
+      ]
+    },
+    {
+      "formulary_id": "MED-004",
+      "generic_name": "insulin glargine",
+      "known_synonyms": [],
+      "typical_dose": "10 units",
+      "typical_mode": "subcutaneous",
+      "typical_frequency": "nightly",
+      "common_indications": [
+        "glycemic control"
+      ]
+    },
+    {
+      "formulary_id": "MED-005",
+      "generic_name": "levofloxacin",
+      "known_synonyms": [],
+      "typical_dose": "500mg",
+      "typical_mode": "IV",
+      "typical_frequency": "daily",
+      "common_indications": [
+        "pneumonia",
+        "presumed infection"
+      ]
+    },
+    {
+      "formulary_id": "MED-006",
+      "generic_name": "albuterol",
+      "known_synonyms": [],
+      "typical_dose": "2.5mg",
+      "typical_mode": "nebulized",
+      "typical_frequency": "every 4 hours as needed",
+      "common_indications": [
+        "wheezing",
+        "dyspnea"
+      ]
+    },
+    {
+      "formulary_id": "MED-007",
+      "generic_name": "apixaban",
+      "known_synonyms": [],
+      "typical_dose": "5mg",
+      "typical_mode": "PO",
+      "typical_frequency": "BID",
+      "common_indications": [
+        "atrial fibrillation",
+        "anticoagulation"
+      ]
+    },
+    {
+      "formulary_id": "MED-008",
+      "generic_name": "lisinopril",
+      "known_synonyms": [],
+      "typical_dose": "10mg",
+      "typical_mode": "PO",
+      "typical_frequency": "daily",
+      "common_indications": [
+        "hypertension",
+        "afterload reduction"
+      ]
+    }
+  ]
+}
