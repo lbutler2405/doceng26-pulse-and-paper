@@ -16,7 +16,7 @@ Everything runs in Google Colab. Nothing to install, nothing to configure. You n
 | **0** | Understanding the Data | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lbutler2405/doceng26-pulse-and-paper/blob/main/Notebooks/block0_understanding_the_data.ipynb) |
 | **1** | Meet Your Patient | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lbutler2405/doceng26-pulse-and-paper/blob/main/Notebooks/block1_meet_your_patient.ipynb) |
 | **2** | Catch the Model Cheating | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lbutler2405/doceng26-pulse-and-paper/blob/main/Notebooks/block2_catch_the_model_cheating.ipynb) |
-| **3** | Explainability and Generalisation | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lbutler2405/doceng26-pulse-and-paper/blob/main/Notebooks/block3_explainability_and_generalization.ipynb) |
+| **3** | Multi-modal AI, Explainability and Generalisation | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lbutler2405/doceng26-pulse-and-paper/blob/main/Notebooks/block3_explainability_and_generalization.ipynb) |
 
 Three things to know before you run anything:
 
