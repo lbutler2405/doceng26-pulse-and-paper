@@ -42,14 +42,6 @@ New columns on synthetic_notes.csv (added if not already present):
 New rows on synthetic_medication_labels.csv, same 7-column schema as
 existing rows, pointing at the amendment's own note_id, so the corrected
 value is exactly as recoverable via text[start:end] as the original was.
-
-WARNING FOR BLOCK 2: alignment.naive_note_signal() counts notes and checks
-for concern flags directly off synthetic_notes.csv. This script's rows use
-note_type="amendment", which alignment.py now explicitly excludes (see the
-one-line filter at the top of naive_note_signal, added alongside this
-script) specifically so Block 2's numbers don't shift silently just because
-Block 1 grew a new capability. If you ever regenerate alignment.py from
-scratch, keep that filter.
 """
 
 import argparse
@@ -59,12 +51,7 @@ import pandas as pd
 import numpy as np
 from datetime import datetime
 
-# Inlined from synthetic_generator.py rather than imported: generate_amendments.py
-# and synthetic_generator.py don't always live in the same folder (the
-# generator tends to sit alongside the CSVs it produces, this script sits
-# alongside the other tutorial modules), so importing across that boundary
-# is one path assumption too many. Keep MEDICATIONS in sync with
-# synthetic_generator.py's own copy by hand if you ever add a drug there.
+
 MEDICATIONS = [
     dict(name="metoprolol", brand="Lopressor", dose="25mg", mode="PO", freq="BID", reasons=["rate control", "hypertension"]),
     dict(name="furosemide", brand="Lasix", dose="40mg", mode="IV", freq="daily", reasons=["volume overload", "heart failure"]),
