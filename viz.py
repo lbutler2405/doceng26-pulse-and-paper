@@ -1,12 +1,9 @@
 """
 viz.py
 
-Block 1 visualization module for the DocEng '26 tutorial,
-"Temporally Entangled Documents: Multimodal AI for ICU Records Under Label Ambiguity".
+Three plots:
 
-Three plots, each doing one specific job:
-
-  plot_patient_timeline(patient_id)  -> the Figure-1-style multi-track view.
+  plot_patient_timeline(patient_id): the Figure-1-style multi-track view.
       Continuous signal, intermittent labs, delayed notes, and (when present)
       ECG and echo, each on their own track, all sharing one time axis. This
       is the plot that makes asynchrony visible rather than asserted.
@@ -20,17 +17,16 @@ Three plots, each doing one specific job:
       `tracks` lets you pick a subset, e.g. tracks=["signal", "notes"].
       `base_fontsize` scales every label/legend/tick in the figure at once.
 
-  plot_event_window(patient_id)      -> the "possible event window" diagram.
+  plot_event_window(patient_id): the "possible event window" diagram.
       True onset plus the uncertainty band around it, with the first
       documented note overlaid, so the gap between "when it happened" and
       "when someone wrote it down" has a visible shape.
 
-  plot_lag_by_tier()                 -> the aggregate calibration payoff.
+  plot_lag_by_tier(): the aggregate calibration payoff.
       Documentation lag distribution across all patients, split by
       entanglement tier, computed on the fly from raw timestamps (never
       precomputed in the CSVs, that's the point).
 
-Nothing here trains a model. That's Block 2.
 """
 
 import os
@@ -40,9 +36,9 @@ import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 from matplotlib.lines import Line2D
 
-# ---------------------------------------------------------------------------
+
 # Palette (kept consistent with the tutorial deck: Teal Trust)
-# ---------------------------------------------------------------------------
+
 TEAL = "#028090"
 SEAFOAM = "#00A896"
 MINT = "#02C39A"
@@ -134,11 +130,9 @@ def _draw_onset_context(ax, label):
         ax.axvline(label.true_onset_time, color=AMBER, linestyle="--", linewidth=1.4, zorder=1)
 
 
-# ---------------------------------------------------------------------------
-# Track drawers: each takes an Axes + the patient bundle and fills it in.
+# Track drawers
 # Kept separate so any layout (stacked / separate / grid) can call the same
 # per-track logic.
-# ---------------------------------------------------------------------------
 
 def _draw_signal(ax, b, fs):
     vitals = b["vitals"]
@@ -190,9 +184,6 @@ def _draw_notes(ax, b, fs):
             ax.scatter(n.storetime, y, color=style["color"], s=50, marker=style["marker"], zorder=3)
             note_id_pos[n.note_id] = (y, n.storetime)
 
-        # amendments get one more thing: a dashed line back to the row of the
-        # note they actually correct, so "this points at that" is visible,
-        # not just implied by both rows existing
         has_amendments = "is_amendment" in notes.columns and "amends_note_id" in notes.columns
         if has_amendments:
             for _, a in notes[notes.is_amendment == 1].iterrows():
@@ -298,9 +289,7 @@ def _format_time_axis(ax, fs, minticks=4, maxticks=8, xlabel=True):
         ax.set_xlabel("Time", fontsize=fs["label"])
 
 
-# ---------------------------------------------------------------------------
 # Plot 1: the multi-track timeline
-# ---------------------------------------------------------------------------
 
 def plot_patient_timeline(patient_id, data_dir=".", layout="stacked", tracks=None,
                            figsize=None, base_fontsize=12, ncols=2, save_path=None, dpi=130):
@@ -356,7 +345,7 @@ def plot_patient_timeline(patient_id, data_dir=".", layout="stacked", tracks=Non
             figs[name] = fig
         return figs
 
-    # -- layout: grid --------------------------------------------------
+    # layout: grid 
     if layout == "grid":
         n = len(tracks)
         nrows = int(np.ceil(n / ncols))
@@ -390,7 +379,7 @@ def plot_patient_timeline(patient_id, data_dir=".", layout="stacked", tracks=Non
             fig.savefig(save_path, dpi=dpi, bbox_inches="tight")
         return fig
 
-    # -- layout: stacked (default) ------------------------------------------
+    #layout: stacked (default) 
     n = len(tracks)
     ratios = [TRACK_HEIGHT_RATIOS.get(t, 1.5) for t in tracks]
     this_figsize = figsize or (14, 2.3 * sum(ratios))
@@ -412,9 +401,7 @@ def plot_patient_timeline(patient_id, data_dir=".", layout="stacked", tracks=Non
     return fig
 
 
-# ---------------------------------------------------------------------------
 # Plot 2: the event-window diagram
-# ---------------------------------------------------------------------------
 
 def plot_event_window(patient_id, data_dir=".", figsize=(10, 3.5), base_fontsize=12, save_path=None):
     b = load_patient_bundle(patient_id, data_dir)
@@ -454,9 +441,7 @@ def plot_event_window(patient_id, data_dir=".", figsize=(10, 3.5), base_fontsize
     return fig
 
 
-# ---------------------------------------------------------------------------
 # Plot 3: aggregate documentation lag by entanglement tier
-# ---------------------------------------------------------------------------
 
 def plot_lag_by_tier(data_dir=".", figsize=(8, 5.5), base_fontsize=12, save_path=None):
     patients = pd.read_csv(f"{data_dir}/synthetic_patients.csv")
@@ -493,9 +478,7 @@ def plot_lag_by_tier(data_dir=".", figsize=(8, 5.5), base_fontsize=12, save_path
     return fig
 
 
-# ---------------------------------------------------------------------------
 # Demo
-# ---------------------------------------------------------------------------
 
 if __name__ == "__main__":
     import os
