@@ -23,7 +23,7 @@ def _text(root, path, cast=str, default=None):
 
 
 def decode_lead_waveform(lead_data_el):
-    """Genuinely decodes one lead's base64 samples back to amplitude units,
+    """Decodes one lead's base64 samples back to amplitude units,
     the same absolute int16 little-endian format confirmed against the
     original uploaded MUSE file."""
     wf_text = lead_data_el.find("WaveFormData").text
