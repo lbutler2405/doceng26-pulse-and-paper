@@ -98,10 +98,7 @@ def build_documents(data_dir="."):
 
         note_objs = []
         if fhir_data:
-            # sourced from a real, parsed FHIR bundle: no character-span
-            # medication annotations exist here, that NLP step was specific
-            # to our own tutorial CSV pipeline and hasn't been run on this
-            # source yet, an honest and realistic gap, not an oversight
+            
             for n in fhir_data["notes"]:
                 note_objs.append(dict(
                     note_id=n["note_id"], note_type=n["note_type"], author_type=n["author_type"],
@@ -111,16 +108,7 @@ def build_documents(data_dir="."):
                     medication_mentions=[],
                 ))
 
-            # Amendments are a CSV-pipeline-specific addition (generate_amendments.py).
-            # A FHIR-sourced patient's base notes come from the bundle, under the
-            # bundle's own DocumentReference ids, but a correction to one of this
-            # tutorial's own CSV notes for the same subject still genuinely exists
-            # and still belongs in the document. It isn't silently dropped just
-            # because this patient also happens to have a real FHIR export. Its
-            # amends_note_id won't resolve to another note_id in *this* document
-            # (the original lives under a different id inside the FHIR bundle),
-            # which the schema doesn't require, it only requires the pointer to
-            # be present, so this stays honest without inventing a fake match.
+
             amendment_rows = pn[pn.get("is_amendment", 0) == 1] if "is_amendment" in pn.columns else pn.iloc[0:0]
             for n in amendment_rows.itertuples():
                 med_spans = med_labels[med_labels.note_id == n.note_id]
@@ -261,12 +249,6 @@ def build_documents(data_dir="."):
 
     return documents
 
-
-# ---------------------------------------------------------------------------
-# Render a document back out as a human-readable chart summary.
-# This is the pipeline step that matters for document engineering: structured
-# sources -> unified document model -> generated human-readable output.
-# ---------------------------------------------------------------------------
 
 def render_markdown(doc):
     a, c, e = doc["admission"], doc["complexity_context"], doc["evidence_streams"]
