@@ -1,10 +1,7 @@
 """
 pdf_report.py
 
-Block 1 capstone for the DocEng '26 tutorial. Turns one patient's evidence
-into an actual document, twice, on purpose:
-
-  render_naive_pdf(patient_id)       -> what most systems would hand you.
+  render_naive_pdf(patient_id): what most systems would hand you.
       Every fact on one page, one timestamp each, charted order. This is
       the artifact that makes it look like the ICU stay unfolded exactly
       as written down. It's plausible. It's also quietly wrong about time:
@@ -12,7 +9,7 @@ into an actual document, twice, on purpose:
       and a lab's "date" doesn't say whether it's when blood was drawn or
       when the result came back.
 
-  render_engineered_pdf(patient_id)  -> the same evidence, engineered.
+  render_engineered_pdf(patient_id): the same evidence, engineered.
       Every fact now carries both timestamps that actually exist in the
       record (when it happened, when it was charted) plus the lag between
       them. The possible deterioration window is shown rather than hidden.
@@ -20,9 +17,6 @@ into an actual document, twice, on purpose:
       keyboard first. Medication detail comes from the exact character
       spans extracted earlier in the notebook, not eyeballed. You choose
       which sections go in via the `sections` dict.
-
-Put the two PDFs side by side and the document-engineering argument stops
-being an argument, it's just visibly, structurally different.
 """
 
 import os
@@ -90,9 +84,7 @@ def _table(rows, col_widths, header_bg=C_MUTED):
     return t
 
 
-# ---------------------------------------------------------------------------
 # Stage A: the naive render
-# ---------------------------------------------------------------------------
 
 def render_naive_pdf(patient_id, data_dir=".", save_path=None):
     """One timestamp per fact, charting order throughout. This is what a
@@ -140,9 +132,7 @@ def render_naive_pdf(patient_id, data_dir=".", save_path=None):
     return save_path
 
 
-# ---------------------------------------------------------------------------
 # Stage B: the engineered render
-# ---------------------------------------------------------------------------
 
 def render_engineered_pdf(patient_id, data_dir=".", sections=None, save_path=None, work_dir=".", as_of_time=None):
     """Same evidence as render_naive_pdf, but every fact carries both of its
