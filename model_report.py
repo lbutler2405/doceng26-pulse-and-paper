@@ -1,7 +1,7 @@
 """
 model_report.py
 
-Block 2's capstone: the artifact a document engineer would actually hand
+The artifact a document engineer would actually hand
 up the chain after this evaluation, not a patient's chart, this tutorial's
 Block 1 already built that, but the model evaluation itself. Same idea as
 pdf_report.py, participant-directed sections, honest about what the numbers
@@ -84,7 +84,7 @@ def _run_all_models(data_dir):
 
 
 def _illustrative_case_chart(data_dir, patient_id, work_dir):
-    """The same two-panel 'asynchronous evidence -> uncertain onset, aligned'
+    """The same two-panel 'asynchronous evidence to uncertain onset, aligned'
     figure from this block's own Figure-1 recreation, factored out here so
     the report can embed it for one concrete patient rather than staying
     purely aggregate throughout."""
