@@ -1,14 +1,14 @@
 """
 models.py
 
-Block 2: the naive fixed-window baseline vs. the time-aware model, built on
+The naive fixed-window baseline vs. the time-aware model, built on
 the exact same underlying data, differing only in how they turn raw
 timestamps into features. Both predict the same thing: will this patient
 deteriorate at some point during their stay (`outcome`), using only data
 available by a fixed prediction time.
 
 Neither model can see the future. The naive model's problem is what it
-leans on: a blunt "how many notes / how recently" signal that quietly
+leans on: a blunt "how many notes/how recently" signal that quietly
 encodes documentation speed rather than physiology, one that happens to
 correlate with the outcome in-sample but degrades unevenly across patients
 whose documentation is slower for structural reasons (Part 4: population
@@ -122,7 +122,7 @@ def build_features(data_dir=".", lookback_hours=48):
             **note_signal,
         })
 
-        # --- time-aware: trend features + missingness, no note shortcut ---
+        # time-aware: trend features + missingness, no note shortcut
         hr_last2, hr_slope, hr_n = al.event_centered_trend(pv, "charttime", "heartrate", pred_time, lookback_hours)
         o2_last2, o2_slope, o2_n = al.event_centered_trend(pv, "charttime", "o2sat", pred_time, lookback_hours)
         sbp_last2, sbp_slope, sbp_n = al.event_centered_trend(pv, "charttime", "sbp", pred_time, lookback_hours)
