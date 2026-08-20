@@ -15,17 +15,10 @@ Two independent complexity axes, plus one compounding population axis:
   - population_context       : neurodivergent / disability / dementia (mild/moderate/severe) / none
   - socioeconomic_context    : under_resourced flag (independent, compounding)
 
-Design principle: raw files contain only what a real hospital system would
+Raw files contain only what a real hospital system would
 actually give you, timestamps and observations. Nothing that requires
 comparing two timestamps (documentation lag, time-to-result, etc.) is
-pre-computed anywhere in the output. That comparison is left as a Block 1
-exercise for tutorial participants. The one exception is `synthetic_labels.csv`,
-which plays the role of the instructor's answer key: it carries the
-generator's ground truth (true onset time, the uncertainty band around it),
-values that are not derivable from the raw tables at all, since no hospital
-system records "true onset of clinical deterioration" directly. That is a
-different kind of thing from a lag, which the raw tables already contain the
-ingredients for.
+pre-computed anywhere in the output.
 
 Output: eight CSVs written to OUT_DIR.
 """
@@ -36,9 +29,7 @@ from datetime import datetime, timedelta
 
 rng = np.random.default_rng(42)
 
-# ---------------------------------------------------------------------------
 # Configuration
-# ---------------------------------------------------------------------------
 
 N_PATIENTS = 75
 BASE_SUBJECT_ID = 90000001
@@ -228,9 +219,7 @@ def round_datetimes(df, freq="min"):
     return df
 
 
-# ---------------------------------------------------------------------------
 # 1. Patients
-# ---------------------------------------------------------------------------
 
 def generate_patients():
     rows = []
@@ -290,10 +279,8 @@ def generate_patients():
     return pd.DataFrame(rows)
 
 
-# ---------------------------------------------------------------------------
 # Modifier helpers (population + socioeconomic compounding on top of entanglement tier)
-# ---------------------------------------------------------------------------
-
+  
 def dementia_severity(pop_ctx):
     return {"dementia_mild": 1, "dementia_moderate": 2, "dementia_severe": 3}.get(pop_ctx, 0)
 
@@ -336,9 +323,8 @@ def lab_lag_multiplier(row):
     return mult
 
 
-# ---------------------------------------------------------------------------
+
 # 2. Continuous vitals stream
-# ---------------------------------------------------------------------------
 
 BASELINE_VITALS = dict(heartrate=80, resprate=18, o2sat=97, sbp=120, dbp=75)
 BASELINE_SD = dict(heartrate=6, resprate=2.5, o2sat=1.2, sbp=10, dbp=7)
@@ -389,9 +375,7 @@ def generate_vitals(patients):
     return pd.DataFrame(rows)
 
 
-# ---------------------------------------------------------------------------
 # 3. Intermittent labs stream
-# ---------------------------------------------------------------------------
 
 def generate_labs(patients):
     rows = []
@@ -440,9 +424,7 @@ def generate_labs(patients):
     return pd.DataFrame(rows)
 
 
-# ---------------------------------------------------------------------------
 # 4. Notes stream (clinician + caregiver, unified with an author_type column)
-# ---------------------------------------------------------------------------
 
 def generate_notes(patients):
     rows = []
@@ -542,13 +524,12 @@ def _make_note(note_id, row, note_type, author_type, event_charttime, storetime,
     )
 
 
-# ---------------------------------------------------------------------------
 # 4b. Medication mentions with exact character-span labels, mirroring the
 #     real medication-labels-mimic-note schema (Start Position, End Position,
 #     Annotation, Group) exactly, so the same span-to-text join workflow
 #     applies. We're generating the text ourselves, so spans are exact by
 #     construction on this side, that's the participant's job to recover.
-# ---------------------------------------------------------------------------
+
 
 def add_medication_mentions(notes, patients):
     """Appends one medication sentence to a subset of admission/routine/discharge
@@ -623,12 +604,10 @@ def add_medication_mentions(notes, patients):
     return notes, med_labels
 
 
-# ---------------------------------------------------------------------------
 # 5a. ECG events: structured interval/axis measurements, not raw waveform.
 #     Mirrors Master_Sheet_Sample.csv's real schema (rr_interval, p/qrs/t
 #     onset-end, axes) plus a short interpretive finding, the same shape as
 #     a real ECG machine report without touching actual signal data.
-# ---------------------------------------------------------------------------
 
 ECG_FINDINGS_NORMAL = [
     "Normal sinus rhythm", "Sinus rhythm, otherwise normal ECG",
@@ -695,9 +674,7 @@ def generate_ecg_events(patients):
     return pd.DataFrame(rows)
 
 
-# ---------------------------------------------------------------------------
 # 5b. Echo events: structured findings, not raw video. Rarer than ECG.
-# ---------------------------------------------------------------------------
 
 VALVE_GRADES = ["none", "trace", "mild", "moderate", "severe"]
 ECHO_FINDINGS_NORMAL = [
@@ -742,14 +719,12 @@ def generate_echo_events(patients):
     return pd.DataFrame(rows)
 
 
-# ---------------------------------------------------------------------------
 # 5c. Physician interpretation notes for ECG/echo events.
 #     A machine/tech report existing is not the same as a clinician having
 #     read and charted an interpretation of it. This adds a third timing
 #     layer on top of ecg_time -> report_time: report_time -> the moment a
 #     clinician actually documents their read, which is the layer that
 #     matters clinically and is easy to overlook.
-# ---------------------------------------------------------------------------
 
 def generate_diagnostic_interpretation_notes(patients, ecg, echo):
     rows = []
@@ -848,9 +823,7 @@ def generate_event_log(patients, vitals, labs, notes, ecg, echo):
     return df.sort_values(["hadm_id", "timestamp"]).reset_index(drop=True)
 
 
-# ---------------------------------------------------------------------------
 # 6. Labels (ground truth, derived from the generated notes for consistency)
-# ---------------------------------------------------------------------------
 
 def generate_labels(patients):
     """The instructor's answer key. true_onset_time and the possible_window
@@ -912,9 +885,8 @@ def write_medication_formulary(out_path):
         json.dump(formulary, f, indent=2)
 
 
-# ---------------------------------------------------------------------------
+
 # Main
-# ---------------------------------------------------------------------------
 
 if __name__ == "__main__":
     import argparse
@@ -940,12 +912,7 @@ if __name__ == "__main__":
     event_log = generate_event_log(patients, vitals, labs, notes, ecg, echo)
     labels = generate_labels(patients)      # the answer key: outcome + true_onset_time live ONLY here going forward
 
-    # Public patients.csv drops los_days (computable from admit/disch), outcome and
-    # true_onset_time (the ground truth belongs in labels.csv only, not leaked
-    # into the file participants build the Block 1 timeline exercise from).
-    # comorbidities / has_cardiac_history stay: that's real observable patient
-    # history, not the hidden ground truth, and it's what actually drives
-    # whether a given patient has ECG/echo events at all.
+    
     patients_public = patients.drop(columns=["los_days", "outcome", "true_onset_time"])
 
     print("patients:", patients_public.shape)
