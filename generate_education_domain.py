@@ -1,7 +1,7 @@
 """
 generate_education_domain.py
 
-A small, second synthetic corpus, deliberately not healthcare, built to
+A small, second synthetic corpus, not healthcare, built to
 prove one specific claim: alignment.py's functions (naive_window,
 event_centered_trend, soft_event_label, missingness_features) are genuinely
 generic. Nothing about them is imported, wrapped, or modified for this
@@ -9,11 +9,11 @@ domain, they're called completely unmodified in the Block 3 notebook,
 against this data instead of ICU data.
 
 Same taxonomy as the clinical corpus, re-skinned:
-  continuous signal      -> daily LMS engagement (minutes active)
-  intermittent measures  -> quiz scores, taken on one day, graded on another
-  delayed narrative      -> counselor notes, written well after a student
+  continuous signal:       daily LMS engagement (minutes active)
+  intermittent measures: quiz scores, taken on one day, graded on another
+  delayed narrative:      counselor notes, written well after a student
                              started struggling, not when it began
-  uncertain onset         -> "started struggling" is a window, not an instant,
+  uncertain onset:         "started struggling" is a window, not an instant,
                              exactly like true_onset_time in the ICU corpus
 """
 import numpy as np
@@ -82,8 +82,6 @@ def gen_notes(sid, decline_start_day):
                       text=NOTE_TEMPLATES["routine_checkin"]))
     note_id += 1
     if decline_start_day is not None:
-        # the flag is written well AFTER the decline actually started, documentation
-        # lag, exactly the ICU corpus's central problem, now in a classroom
         flag_lag_days = float(rng.uniform(4, 12))
         event_time = COURSE_START + pd.Timedelta(days=decline_start_day)
         storetime = event_time + pd.Timedelta(days=flag_lag_days)
