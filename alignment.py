@@ -22,7 +22,7 @@ tutorial.
 
 Neither approach can see into the future, both only ever use storetime <= T
 for anything that has to be "charted" before it exists. The naive approach's
-mistake isn't time travel. It's *what it leans on*.
+mistake isn't time travel. It's what it leans on.
 """
 
 import numpy as np
