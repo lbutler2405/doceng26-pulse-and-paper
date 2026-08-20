@@ -29,9 +29,7 @@ import numpy as np
 import pandas as pd
 
 
-# ---------------------------------------------------------------------------
 # Windowing
-# ---------------------------------------------------------------------------
 
 def naive_window(df, time_col, prediction_time, lookback_hours=48):
     """Everything with time_col in (prediction_time - lookback, prediction_time].
@@ -61,10 +59,8 @@ def event_centered_trend(df, time_col, value_col, prediction_time, lookback_hour
     return last_value, float(slope), len(window)
 
 
-# ---------------------------------------------------------------------------
 # Soft / probabilistic labelling under onset uncertainty
-# ---------------------------------------------------------------------------
-
+  
 def soft_event_label(evaluation_time, window_start, window_end):
     """A patient's deterioration doesn't switch on at a single instant, it's
     somewhere in an uncertainty window. Rather than a hard 0/1 label at an
@@ -80,10 +76,8 @@ def soft_event_label(evaluation_time, window_start, window_end):
     return (evaluation_time - window_start) / (window_end - window_start)
 
 
-# ---------------------------------------------------------------------------
 # Structured missingness
-# ---------------------------------------------------------------------------
-
+  
 def missingness_features(df, time_col, prediction_time, lookback_hours=48, expected_per_day=None):
     """How much evidence is actually present in the window, relative to how
     much we'd expect, is itself informative (Part 4: missingness is not
@@ -96,10 +90,8 @@ def missingness_features(df, time_col, prediction_time, lookback_hours=48, expec
     return n, n / max(expected, 1e-6)
 
 
-# ---------------------------------------------------------------------------
 # Note-derived signal, built two different ways on purpose
-# ---------------------------------------------------------------------------
-
+  
 def naive_note_signal(notes_df, prediction_time, lookback_hours=48):
     """The shortcut: how many notes exist, and is one of them 'concerning',
     filtered purely by storetime. This is exactly the kind of easy,
